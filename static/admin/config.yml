@@ -1,0 +1,53 @@
+backend:
+  name: git-gateway
+  branch: master
+
+publish_mode: editorial_workflow
+media_folder: static/img
+public_folder: /img
+
+collections:
+  - name: "projekt"
+    label: "Projekt"
+    folder: "src/pages/projekt"
+    create: true
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+    fields:
+      - {label: "Template Key", name: "templateKey", widget: "hidden", default: "projekt-post"}
+      - {label: "Title", name: "title", widget: "string"}
+      - {label: "Publish Date", name: "date", widget: "datetime"}
+      - {labal: "Featured Image", name: "thumbnail", widget: "image"}
+      - {label: "Description", name: "description", widget: "string"}
+      - {label: "Body", name: "body", widget: "markdown"}
+      - {label: "Tags", name: "tags", widget: "list"}
+  - name: "pages"
+    label: "Pages"
+    files:
+      - file: "src/pages/ofundacji/index.md"
+        label: "Ofundacji"
+        name: "ofundacji"
+        fields:
+        - {label: "Template Key", name: "templateKey", widget: "hidden", default: "ofundacji-page"}
+        - {label: "Title", name: "title", widget: "string"}
+        - {labal: "Featured Image", name: "thumbnail", widget: "image"}
+        - {label: "Description", name: "description", widget: "string"}
+        - {label: "Body", name: "body", widget: "markdown"}  
+      - file: "src/pages/kontakt/index.md"
+        label: "Kontakt"
+        name: "kontakt"
+        fields:
+        - {label: "Template Key", name: "templateKey", widget: "hidden", default: "kontakt-page"}
+        - {label: "Title", name: "title", widget: "string"}
+        - {labal: "Featured Image", name: "thumbnail", widget: "image"}
+        - {label: "Description", name: "description", widget: "string"}
+        - {label: "Body", name: "body", widget: "markdown"}
+      - file: "src/pages/cele/index.md"
+        label: "Cele"
+        name: "cele"
+        fields:
+        - {label: "Template Key", name: "templateKey", widget: "hidden", default: "cele-page"}
+        - {label: "Title", name: "title", widget: "string"}
+        - {labal: "Featured Image", name: "thumbnail", widget: "image"}
+        - {label: "Description", name: "description", widget: "string"}
+        - {label: "Body", name: "body", widget: "markdown"}
+        
