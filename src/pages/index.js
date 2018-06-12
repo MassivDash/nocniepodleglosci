@@ -57,36 +57,34 @@ export default class IndexPage extends React.Component {
 
       <div>
       <Helmet>
-      <title> Fundacja Nowa Idea | Racjonalni Idealisci </title>
-      <meta property="og:url"                content="Fundacja Idea Nowa, racjonalni idealisci" />
+      <title> Noc Niepodległości | 10/11 </title>
+      <meta property="og:url"                content="Noc Niepodległości | 10/11" />
       <meta property="og:type"               content="website" />
-      <meta property="og:title"              content="Fundacja Idea Nowa, racjonalni idealisci" />
-      <meta property="og:description"        content="Fundacja Idea Nowa, racjonalni idealisci" />
+      <meta property="og:title"              content="Noc Niepodległości | 10/11" />
+      <meta property="og:description"        content="Noc Niepodległości | 10/11" />
       <meta property="og:image"              content={config.siteLogo} />
 
-      <meta name="twitter:title" content="Fundacja Idea Nowa, racjonalni idealisci" />
-      <meta name="twitter:description" content="Fundacja Idea Nowa, racjonalni idealisci" />
-      <meta property="og:description"  content="Fundacja Idea Nowa, racjonalni idealisci" />
+      <meta name="twitter:title" content="Noc Niepodległości | 10/11" />
+      <meta name="twitter:description" content="Noc Niepodległości | 10/11" />
+      <meta property="og:description"  content="Noc Niepodległości | 10/11" />
       <meta name="twitter:image" content={config.siteUrl} />
       <meta name="twitter:card" content="summary_large_image" />
 
 </Helmet>
       
 
-      <section className="hero is-fullheight myhero">
+      <section className="hero is-fullheight asfaltbackground">
       <div className="hero-body">
     <div className="container has-text-centered">
-    <div className="biglogo">
-              <div className="fund">Fundacja:</div>
-              <div className="idea">NOWA<br></br>IDEA</div>
-              <div className="catchphrase">Idealni Racjonaliści</div>
+    <div className="logo"><b>NOC <span>10/11</span></b></div>
             </div>
+            
     </div>
-  </div> 
+    <div className="subtext">Zapraszamy do wspólnej zabawy z okazji Święta Niepodległości!</div>
            
       
       </section>
-      <section className="section">
+      <section className="section asfaltbackground">
         <div className="container">
 
                  
@@ -118,7 +116,7 @@ export default class IndexPage extends React.Component {
         </section>
 
       
-      <section className="section">
+      <section className="section asfaltbackground">
       <div className="container">
       <div className="columns">
            <div className="column">

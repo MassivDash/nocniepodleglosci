@@ -1,14 +1,37 @@
 @import "~bulma/sass/utilities/initial-variables"
 @import "~react-alice-carousel/src/alice-carousel.scss"
+@import "~bulma"
+@font-face 
+	font-family: "LOUGRAMM"
+	src: url("fonts/LOUGRAMM.ttf") format("truetype")
+
 
 
 // Config vars
-$spaceout-blue: #363636
-$spaceout-invert: #fff
+$spaceout-blue: #f0513a
+$spaceout-invert: #000
 $spaceout-border: rgba(70, 87, 152, 0.3)
 $primary: $spaceout-blue
 $primary-invert: $spaceout-invert
 
+body 
+  color: whitesmoke
+
+.subtext 
+  width: 100%
+  text-align: center
+  padding: 0 0 7vh 0
+
+
+.has-text-primary 
+  color: $spaceout-blue !important   
+
+
+.asfaltbackground
+  background-image: url(/img/asfalt.png)
+  background-position: top
+  background-repeat: repeat 
+  background-color: black
 
 .logoicon
   overflow: visible
@@ -21,7 +44,6 @@ $primary-invert: $spaceout-invert
 
 @media (min-width:986px)
   .container.has-text-centered 
-    border: 1px solid whitesmoke
     padding: 2em 4em
 
   .alice-carousel__prev-btn-item
@@ -68,12 +90,6 @@ $primary-invert: $spaceout-invert
 .margin-top-0
   margin-top: 0 !important
 
-.myhero
-   
-   background: url('../img/background.jpg')
-   background-size: cover
-   background-color: #0188b5
-   border: 5px solid white
 
 .mytitle
   padding-top: 2em 
@@ -82,69 +98,62 @@ $primary-invert: $spaceout-invert
 
 
   
-
-@media (min-width: 986px)
-  section.hero.is-info.is-small 
-    border: 5px solid white
-
-  .mycontent
-    padding: 2em 4em
-    border: 1px solid $spaceout-border
-
-  .biglogo 
-    margin: auto
-    display: flex
-    flex-direction: column
-    align-items: start
-    font-family: 'Roboto', sans-serif
-    text-align: left
-
-    .idea
-      font-size: 6.4em 
-      color: whitesmoke
-      font-weight: bold
-
-    
-      
-
-    .catchphrase 
-      font-size: 2em
-      color: white
-
-    .fund 
-      font-size: 1.4em
-      color: whitesmoke
-      
-
   
-@media (max-width: 986px) 
-
-  .biglogo 
-    
-    
-    font-family: 'Roboto', sans-serif
-
-    .idea
-      font-size: 3em 
-      color: whitesmoke
-      font-weight: bold
-      
-
-    .catchphrase 
-      font-size: 1em
-      color: white
-
-    .fund 
-      font-size: 0.8em
-      color: whitesmoke
-          
+.navbar-item
+  color: #fff
 
 
+.logo 
+  text-align: center
+  margin: auto
+  
+  
+
+.logo b
+  font-family: LOUGRAMM
+  font-size: 5vw
+  color: #fff
+  text-shadow: 0 -40px 100px, 0 0 2px, 0 0 1em #ff4444, 0 0 0.5em #ff4444, 0 0 0.1em #ff4444, 0 10px 3px #000
+
+.logo b span
+  animation: blink linear infinite 2s
+  color: #f0513a
+  font-family: Open Sans
+  font-size: 6vw
+
+@keyframes blink 
+  78% 
+    color: inherit
+    text-shadow: inherit
+  
+  79%
+    color: #333
+  
+  80% 
+    text-shadow: none
+  
+  81% 
+    color: inherit
+    text-shadow: inherit
+  
+  82%
+    color: #333
+    text-shadow: none
+  
+  83% 
+    color: inherit
+    text-shadow: inherit
+  
+  92% 
+    color: #333
+    text-shadow: none
+  
+  92.5% 
+    color: inherit
+    text-shadow: inherit
+  
 
 
 
 
 
-
-
-@import "~bulma"

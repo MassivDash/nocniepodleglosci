@@ -8,6 +8,7 @@ import './Footer.sass'
 
 const Footer = () => (
     <footer>
+      <div className="asfaltbackground">
       <div className="container">
       <div className="columns">
 
@@ -81,6 +82,7 @@ const Footer = () => (
   <p style={{ textAlign: 'center', color: '#4f4f4f'}}>
   <small>Designed by spaceout.pl</small>
   </p>
+  </div>
   </div>
   </div>
   </footer>

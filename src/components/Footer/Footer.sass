@@ -2,9 +2,12 @@ $footer: whitesmoke
   
 @media (min-width:1022px)
   footer
+    background-image: url(/img/asfalt.png)
+    background-position: top
+    background-repeat: repeat 
+    background-color: black
     padding: 4em 0
-    background-color: $footer
-    border: 5px solid white
+    
   
     .logofoot
      display: flex
@@ -16,11 +19,11 @@ $footer: whitesmoke
       justify-content: center
       border: 1px solid white
       a
-        color: #4f4f4f
+        color: $footer
         font-size: 0.8em
         padding: 1em
     p
-      color: #4f4f4f
+      color: $footer
       font-size: 0.8em
       margin: 0 10px
 
@@ -29,7 +32,7 @@ $footer: whitesmoke
     justify-content: center
 
     a 
-      color: #4f4f4f
+      color: $footer
 
 
 @media (max-width:1022px)
@@ -53,14 +56,14 @@ $footer: whitesmoke
       justify-content: center
       margin: 0 5px
       a
-        color: #4f4f4f
+        color: $footer
         font-size: 0.9em
         padding: 0.5em
         text-align: center
         
 
     p 
-      color: #4f4f4f
+      color: $footer
       font-size: 1em
       margin-left: 20px
   
@@ -69,4 +72,4 @@ $footer: whitesmoke
     justify-content: center
 
     a 
-      color: #4f4f4f
+      color: $footer
