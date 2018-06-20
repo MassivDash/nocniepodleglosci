@@ -79,7 +79,7 @@ const Footer = () => (
 
   <div className="columns">
     <div className="column">
-  <p style={{ textAlign: 'center', color: '#4f4f4f'}}>
+  <p style={{ textAlign: 'center', color: 'whitesmoke'}}>
   <small>Designed by spaceout.pl</small>
   </p>
   </div>

@@ -5,6 +5,7 @@
   "author": "Austin Green",
   "dependencies": {
     "bulma": "^0.6.0",
+    "eslint-config-airbnb": "^16.1.0",
     "gatsby": "^1.9.213",
     "gatsby-image": "^1.0.46",
     "gatsby-link": "^1.6.37",
