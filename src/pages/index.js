@@ -1,25 +1,57 @@
-import React, {Component} from 'react'
+import React, {PureComponent}  from 'react'
 import PropTypes from 'prop-types'
 import Helmet from 'react-helmet'
+import TrackVisibility from 'react-visibility-sensor';
 import Link from 'gatsby-link'
 import Slider from "react-alice-carousel"
 import SideDots from '../components/SideDots/SideDots'
 import config from "../../data/SiteConfig"
 import Slide from '../components/Slide/Slide'
 import Start from './Sekcje/start';
-import TrackVisibility from 'react-on-screen';
+import Fun from './Sekcje/fun'
 
 
-export default class IndexPage extends Component {
+
+export default class IndexPage extends PureComponent {
     state = {
         
         inView1: false,
+        inView2: false,
+        inView3: false,
+        inView4: false
     };
 
+    setStartVisible1 = () => {
+      this.setState(( prevState ) => {
+        return { inView1: !prevState.inView1};
+    } );
+  }
+
+  setStartVisible2 = () => {
+    this.setState(( prevState ) => {
+      return { inView2: !prevState.inView2};
+  } );
+}
+
+setStartVisible3 = () => {
+  this.setState(( prevState ) => {
+    return { inView3: !prevState.inView3};
+} );
+}
+
+setStartVisible4 = () => {
+  this.setState(( prevState ) => {
+    return { inView4: !prevState.inView4};
+} );
+}
     
-   
+  
 
+    shouldComponentUpdate(nextState) {
+      return nextState.inView1 !== this.state.inView1;
+  };
 
+  
 
     render() {
 
@@ -30,7 +62,7 @@ export default class IndexPage extends Component {
         }
 
         
-
+        console.log(this.state);
       
 
         
@@ -49,6 +81,8 @@ export default class IndexPage extends Component {
                 items: 1
             }
         };
+
+        console.log(this.state);
         const Slides = posts
             .filter(post => post.node.frontmatter.templateKey === 'projekt-post')
             .map(({node: post, i}) => (
@@ -84,70 +118,18 @@ export default class IndexPage extends Component {
 
                 </Helmet>
 
-                <SideDots/>
-                <TrackVisibility>
-                <Start />
+                <SideDots dot1={this.state.inView1} dot2={this.state.inView2}/>
+                <TrackVisibility onChange={this.setStartVisible1}>
+                <Start isVisible={this.state.inView1} />
                 </TrackVisibility>
 
-                <section className="section asfaltbackground" id="zacznijzabawe">
-                    <div className="container">
+                <div className="separtor asfaltbackground"></div>
 
-                        <div className="columns">
-                            <div className="column">
-                                <div className="content">
-                                    <p>
-                                        Pragniemy, aby w tę noc, podobnie jak w Sylwestra, gdy zaczynamy świętować Nowy
-                                        Rok, rozpocząć obchodzenie Święta Niepodległości. Chcemy skorzystać z tego, że
-                                        możemy trochę mocniej zaimprezować, gdyż 11 listopada jest dniem ustawowo wolnym
-                                        od pracy. Nasze święto jest totalnie wyluzowane i dalekie od oficjalnej spiny.
-                                        Chcemy odwoływać się do zupełnie naturalnego poczucia dumy i chęci okazania
-                                        swojego przywiązania do naszego kraju. Przy czym warto podkreślać, iż można to
-                                        czynić w sposób radosny, otwarty, wolny od agresji, bazujący na naszych
-                                        wspaniałych cechach - poczuciu humoru i słowiańskiej skłonności do uciech i
-                                        zabaw.
-                                    </p>
-                                        Nasza akcja nastawiona jest na wciągnięcie do wspólnej zabawy możliwie jak
-                                        największej liczby Polaków i wszystkich, którzy wspólnie z nami chcieliby
-                                        obchodzić Nasze Święto.
-                                    <p>
-                                        Noc Niepodległości z 10 na 11 listopada ma być ogólnopolską, powszechną imprezą
-                                        z okazji Święta Niepodległości.
-                                    </p>
-                                        Chcemy pokazać, że ludzie pogodni, wyluzowani mogą być najzwyczajniej w świecie
-                                         dumni z tego, że pochodzą z Kraju nad Wisłą, a imprezowanie może być jedną z
-                                        narodowych cnót sprzyjających integracji i budowaniu wspólnoty.
-                                    <p>
-                                        Pragniemy aby Święto Niepodległości kojarzyło się z dumą, aby patriotyzm nabrał
-                                        nowego znaczenia, a młodzi Polacy chcieli świętować to, że żyją w wolnej,
-                                        nowoczesnej Ojczyźnie.
-                                    </p>
-                                        Skłonność do zabaw jest jedną z naszych najfajniejszych cech narodowych, którą
-                                        warto celebrować, pielęgnować i szukać sposobności dla jej utrwalenia.
-                                    <p>
-                                        Inicjatywy
-                                    </p>
-                                    Jednym z najpopularniejszych i najbardziej naturalnych sposobów świętowania jest
-                                    zabawa, a jak się bawić to nie indywidualnie tylko, parafrazując słowa piosenki
-                                    Jeremiego Przybory, wespół w zespół! Dlatego zachęcamy polskie zespoły i
-                                    wykonawców, żeby w tę noc rozkręcali ogólnopolską imprezę. W klubach,
-                                    restauracjach, mieszkaniach zorganizujmy imprezy, spotkania, domówki z okazji
-                                    Nocy Niepodległości. Do akcji wciągamy kina, opery, filharmonie (polski
-                                    repertuar) muzea i inne ośrodki kulturalne. Wspólnym elementem ubioru
-                                    uczestników niech będzie biało-czerwony detal; wstążka, kotylion, itp. W trakcie
-                                    imprez podstawę diety stanowi patriotka – biało-czerwone ciastko (konkurs na
-                                    patriotkę trwa!) i pijemy biało-czerwone napoje.
-                                    <p>
-                                        Jesteśmy głęboko przekonani, że Noc Niepodległości stanie się jednym z
-                                        najważniejszych imprezowych świąt w kalendarzu, dorównującym popularnością
-                                        Andrzejkom czy Nocy Świętojańskiej. Sylwestra na razie chyba nie przebijemy, ale
-                                        mamy podobnie jak i on jeden mega atut: następny dzień jest ustawowo wolny od
-                                        pracy!
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </section>
+                <TrackVisibility onChange={this.setStartVisible2} >
+                <Fun isVisible={this.state.inView2} />
+                </TrackVisibility>
+
+                
 
                 <section className="section asfaltbackground" id="imprezy">
                     <div className="container">

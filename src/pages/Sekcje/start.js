@@ -1,11 +1,15 @@
 import React from 'react'; 
 import Noc from '../../img/Noc.svg'
 import Numbers from '../../img/numbers.svg'
+import './start.sass'
 
 const Start = (props) => {
+    
     const style = (
          props.isVisible ? 'hero is-fullheight asfaltbackground visible' : 'hero is-fullheight asfaltbackground start notVisable'
     );
+    
+   
 
     return (
     <section className={style} id="start">
