@@ -1,7 +1,7 @@
 import React, {PureComponent} from 'react'
 import PropTypes from 'prop-types'
 import Helmet from 'react-helmet'
-import TrackVisibility from 'react-visibility-sensor';
+import Observer from '@researchgate/react-intersection-observer';
 import Link from 'gatsby-link'
 
 import SideDots from '../components/SideDots/SideDots'
@@ -20,38 +20,20 @@ export default class IndexPage extends PureComponent {
         inView4: false
     };
 
-    setStartVisible1 = () => {
-        this.setState((prevState) => {
-            return {
-                inView1: !prevState.inView1
-            };
-        });
+    setStartVisible1 = ({ isIntersecting }) => {
+        this.setState({inView1:  isIntersecting })
     }
 
-    setStartVisible2 = () => {
-        this.setState((prevState) => {
-            return {
-                inView2: !prevState.inView2
-            };
-        });
-    }
+    setStartVisible2 = ({ isIntersecting }) => {
+      this.setState({inView2:  isIntersecting })
+  }
 
-    setStartVisible3 = () => {
-        this.setState((prevState) => {
-            return {
-                inView3: !prevState.inView3
-            };
-        });
-    }
-
-    setStartVisible4 = () => {
-        this.setState((prevState) => {
-            return {
-                inView4: !prevState.inView4
-            };
-        });
-    }
-
+  setStartVisible3 = ({ isIntersecting }) => {
+    this.setState({inView3:  isIntersecting })
+}
+setStartVisible4 = ({ isIntersecting }) => {
+  this.setState({inView4:  isIntersecting })
+}
     render() {
 
         if (typeof window !== 'undefined') {
@@ -91,20 +73,25 @@ export default class IndexPage extends PureComponent {
                     dot1={this.state.inView1}
                     dot2={this.state.inView2}
                     dot3={this.state.inView3}/>
-                <TrackVisibility onChange={this.setStartVisible1} scrollCheck={true}>
-
+                <Observer onChange={this.setStartVisible1} >
+                   <div>
                     <Start isVisible={this.state.inView1}/>
-                </TrackVisibility>
+                   </div>
+                </Observer>
 
                 <div className="separtor asfaltbackground"></div>
 
-                <TrackVisibility onChange={this.setStartVisible2} scrollCheck={true} offset={{top:100}}>
+                <Observer onChange={this.setStartVisible2} >
+                  <div>
                     <Fun isVisible={this.state.inView2}/>
-                </TrackVisibility>
+                    </div>
+                </Observer>
 
-                <TrackVisibility onChange={this.setStartVisible3} scrollCheck={true}>
+                <Observer onChange={this.setStartVisible3} >
+                  <div>
                     <Imprezy isVisible={this.state.inView3} posts={posts}/>
-                </TrackVisibility>
+                    </div>
+                </Observer>
 
                 <section className="section asfaltbackground m100vh" id="kontakt">
                     <div className="container">
