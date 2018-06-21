@@ -86,7 +86,7 @@ setStartVisible4 = ({ isIntersecting }) => {
                 <div className="separtor asfaltbackground"></div>
 
                 <Observer 
-                onChange={this.setStartVisible2} {}
+                onChange={this.setStartVisible2} 
                 >
    >
                   <div>
