@@ -79,6 +79,10 @@ setStartVisible4 = ({ isIntersecting }) => {
         this.state.inView3 ? 'section asfaltbackground m100vh visible' : 'section asfaltbackground m100vh notVisable'
    );
 
+   const style3 = (
+    this.state.inView3 ? 'section asfaltbackground m100vh visible' : 'section asfaltbackground m100vh notVisable'
+);
+
 
         return (
 
@@ -104,7 +108,8 @@ setStartVisible4 = ({ isIntersecting }) => {
                 <SideDots
                     dot1={this.state.inView1}
                     dot2={this.state.inView2}
-                    dot3={this.state.inView3}/>
+                    dot3={this.state.inView3}
+                    dot4={this.state.inView4} />
                 <Observer onChange={this.setStartVisible1} >
                    <div>
                     <Start isVisible={this.state.inView1}/>
@@ -151,7 +156,8 @@ setStartVisible4 = ({ isIntersecting }) => {
                     </div>
                 </Observer>
 
-                <section className="section asfaltbackground m100vh" id="kontakt">
+                <Observer onChange={this.setStartVisible4} >
+                <section className={style3} id="kontakt">
                     <div className="container">
                         <div className="columns">
                             <div className="column">
@@ -210,7 +216,7 @@ setStartVisible4 = ({ isIntersecting }) => {
                         </div>
                     </div>
                 </section>
-
+                </Observer>
             </div>
         )
     }
