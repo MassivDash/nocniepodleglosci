@@ -1,15 +1,15 @@
 import React, {PureComponent} from 'react'
 import PropTypes from 'prop-types'
 import Helmet from 'react-helmet'
-import Observer from '@researchgate/react-intersection-observer';
+import Observer from '@researchgate/react-intersection-observer'
 import Link from 'gatsby-link'
-
+import Slider from "react-alice-carousel"
+import Slide from '../components/Slide/Slide'
 import SideDots from '../components/SideDots/SideDots'
 import config from "../../data/SiteConfig"
-
-import Start from './Sekcje/start';
+import Start from './Sekcje/start'
 import Fun from './Sekcje/fun'
-import Imprezy from './Sekcje/imprezy'
+
 
 export default class IndexPage extends PureComponent {
     state = {
@@ -34,6 +34,8 @@ export default class IndexPage extends PureComponent {
 setStartVisible4 = ({ isIntersecting }) => {
   this.setState({inView4:  isIntersecting })
 }
+
+
     render() {
 
         if (typeof window !== 'undefined') {
@@ -42,12 +44,42 @@ setStartVisible4 = ({ isIntersecting }) => {
             require('smooth-scroll')('a[href*="#"]');
         }
 
-        console.log(this.state);
+       
 
         const {data} = this.props
         const {edges: posts} = data.allMarkdownRemark
 
-        console.log(this.state, posts);
+           
+       const responsive = {
+        0: {
+            items: 1
+        },
+        600: {
+            items: 1
+        },
+        1024: {
+            items: 1
+        }
+    };
+
+    const Slides = posts.filter(post => post.node.frontmatter.templateKey === 'projekt-post')
+    .map(({node: post, i}) => (
+        <div key={i + 1}><Slide
+            key={i}
+            myKey={post.fields.slug}
+            thumbnail={post.frontmatter.thumbnail}
+            title={post.frontmatter.title}
+            date={post.frontmatter.date}
+            excerpt={post.excerpt}
+            slug={post.fields.slug}
+            description={post.frontmatter.description}/></div>
+    ));
+
+    const style2 = (
+        this.state.inView3 ? 'section asfaltbackground m100vh visible' : 'section asfaltbackground m100vh notVisable'
+   );
+
+
         return (
 
             <div>
@@ -89,7 +121,33 @@ setStartVisible4 = ({ isIntersecting }) => {
 
                 <Observer onChange={this.setStartVisible3} >
                   <div>
-                    <Imprezy isVisible={this.state.inView3} posts={posts}/>
+                     <section className={style2} id="imprezy">
+                    <div className="container">
+
+                        <div className="columns">
+                            <div className="column">
+                                <div className="content">
+                                    <h1 className="has-text-weight-bold is-size-2">Nasze Projekty</h1>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div className="columns">
+
+                            <Slider
+                                fadeOutAnimation={true}
+                                mouseDragEnabled={true}
+                                playButtonEnabled={false}
+                                responsive={responsive}
+                                dotsDisabled={true}
+                                infinite={true}
+                                >
+
+                                {Slides}
+                            </Slider>
+                        </div>
+                    </div>
+                </section>
                     </div>
                 </Observer>
 
