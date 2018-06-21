@@ -47,7 +47,7 @@ setStartVisible4 = ({ isIntersecting }) => {
         const {data} = this.props
         const {edges: posts} = data.allMarkdownRemark
 
-        console.log(this.state);
+        console.log(this.state, posts);
         return (
 
             <div>
