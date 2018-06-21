@@ -62,6 +62,7 @@ setStartVisible4 = ({ isIntersecting }) => {
         }
     };
 
+    
     const Slides = posts.filter(post => post.node.frontmatter.templateKey === 'projekt-post')
     .map(({node: post, i}) => (
         <div key={i + 1}><Slide
@@ -110,7 +111,7 @@ setStartVisible4 = ({ isIntersecting }) => {
                     dot2={this.state.inView2}
                     dot3={this.state.inView3}
                     dot4={this.state.inView4} />
-                <Observer onChange={this.setStartVisible1} >
+                <Observer  onChange={this.setStartVisible1} >
                    <div>
                     <Start isVisible={this.state.inView1}/>
                    </div>
@@ -118,7 +119,7 @@ setStartVisible4 = ({ isIntersecting }) => {
 
                 <div className="separtor asfaltbackground"></div>
 
-                <Observer onChange={this.setStartVisible2} >
+                <Observer onChange={this.setStartVisible2}  >
                   <div>
                     <Fun isVisible={this.state.inView2}/>
                     </div>

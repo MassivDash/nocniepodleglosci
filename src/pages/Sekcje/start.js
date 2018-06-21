@@ -26,7 +26,7 @@ const Start = (props) => {
     </div>
 
     <div className="startfun">
-        <button>Zacznij Zabawę</button>
+    <a href="#zacznijzabawe"><button>Zacznij Zabawę</button></a>
     </div>
 </section>
 )}
