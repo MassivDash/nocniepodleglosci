@@ -42,11 +42,15 @@ setStartVisible4 = ({ isIntersecting }) => {
             require('smooth-scroll')('a[href*="#"]');
         }
 
+       
+
         console.log(this.state);
 
         const {data} = this.props
         const {edges: posts} = data.allMarkdownRemark
-
+        const options = {
+          threshold: 0.5
+        }
         console.log(this.state);
         return (
 
@@ -81,15 +85,18 @@ setStartVisible4 = ({ isIntersecting }) => {
 
                 <div className="separtor asfaltbackground"></div>
 
-                <Observer onChange={this.setStartVisible2} >
+                <Observer 
+                onChange={this.setStartVisible2} {}
+                >
+   >
                   <div>
                     <Fun isVisible={this.state.inView2}/>
                     </div>
                 </Observer>
 
-                <Observer onChange={this.setStartVisible3} >
+                <Observer  onChange={this.setStartVisible3} >
                   <div>
-                    <Imprezy isVisible={this.state.inView3} posts={posts}/>
+                    <Imprezy  isVisible={this.state.inView3} posts={posts}/>
                     </div>
                 </Observer>
 
