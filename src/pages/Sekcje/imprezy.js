@@ -20,9 +20,8 @@ const Imprezy = ( props ) => {
     }
 };
 
-console.log(props.posts);
-const Slides = props.posts
-    .filter(post => post.node.frontmatter.templateKey === 'projekt-post')
+console.log(props.posts, "slider posts");
+const Slides = props.posts.filter(post => post.node.frontmatter.templateKey === 'projekt-post')
     .map(({node: post, i}) => (
         <div key={i + 1}><Slide
             key={i}
