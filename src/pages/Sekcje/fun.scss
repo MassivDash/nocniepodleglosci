@@ -1,12 +1,28 @@
 .fun {
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    padding-bottom: 1em;
+
     p {
-        font-size: 1.4rem 
+        font-size: 2.4rem;
+        text-align: center;
+        color: whitesmoke; 
+        font-family: "LOUGRAMM"
     }
 
-    U {
-        text-underline-position: below;
-        text-decoration-color: #f0513a;
+    span {
+        color: #f0513a;
     }
+
+    
+}
+
+U {
+    text-underline-position: below;
+    text-decoration-color: #f0513a;
 }
 
 
@@ -42,10 +58,10 @@
 .fungrid {
     display: grid;
     grid-template-areas: 
-    "a a e"
-    "d c e"
-    "b f f";
-    grid-template-columns: 1fr 1fr 1.5fr; 
+    "a a a e"
+    "d c c e"
+    "b f f f";
+    grid-template-columns: repeat(4, 1fr); 
     grid-column-gap: 15px;
     grid-row-gap: 15px;
     justify-content: center;
@@ -63,11 +79,12 @@
 
 .a {
     grid-area: a;
-    background: #D32F2F;
+    background: whitesmoke;
     width: 100%;
     height: 100%;
     margin-bottom: 0;
     border-radius: 7px;
+    color: #1b1b1b;
 }
 
 .b {
