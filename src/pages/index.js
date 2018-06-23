@@ -3,7 +3,7 @@ import PropTypes from 'prop-types'
 import Helmet from 'react-helmet'
 import Observer from '@researchgate/react-intersection-observer'
 import Link from 'gatsby-link'
-import Slider from "react-alice-carousel"
+import Slider from "react-slick"
 import Slide from '../components/Slide/Slide'
 import SideDots from '../components/SideDots/SideDots'
 import config from "../../data/SiteConfig"
@@ -51,22 +51,19 @@ setStartVisible4 = ({ isIntersecting }) => {
         const {edges: posts} = data.allMarkdownRemark
 
            
-       const responsive = {
-        0: {
-            items: 1
-        },
-        600: {
-            items: 1
-        },
-        1024: {
-            items: 1
-        }
-    };
+      
 
+    const settings = {
+        dots: true,
+        infinite: true,
+        speed: 500,
+        slidesToShow: 1,
+        slidesToScroll: 1
+      };
     
     const Slides = posts.filter(post => post.node.frontmatter.templateKey === 'projekt-post')
     .map(({node: post, i}) => (
-        <div key={i + 1}><Slide
+        <div key={i}><Slide
             key={i}
             myKey={post.fields.slug}
             thumbnail={post.frontmatter.thumbnail}
@@ -140,19 +137,15 @@ setStartVisible4 = ({ isIntersecting }) => {
                         </div>
 
                         <div className="columns">
-
-                            <Slider
-                                fadeOutAnimation={true}
-                                mouseDragEnabled={true}
-                                playButtonEnabled={false}
-                                responsive={responsive}
-                                dotsDisabled={false}
-                                infinite={true}
-                                >
+                                <div className="column">
+                                    <div className="slider_wrapper">
+                                
+                            <Slider {...settings} >
 
                                 {Slides}
                             </Slider>
-                        </div>
+                            </div>
+                        </div></div>
                     </div>
                 </section>
                     </div>
