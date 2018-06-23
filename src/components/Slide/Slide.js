@@ -21,7 +21,9 @@ className="myslide"
   <Link className="slider_title" to={props.slug}>
       {props.title}
   </Link>
+  <p>
   {props.excerpt}
+  </p>
   <br />
   <br />
   <Link className="button is-big" to={props.slug}>

@@ -171,7 +171,7 @@ setStartVisible4 = ({ isIntersecting }) => {
                         </div>
 
                         <div className="columns">
-                                <div className="column">
+                                <div className="column flex">
                                     <div className="slider_wrapper">
                                 
                             <Slider {...settings} >
