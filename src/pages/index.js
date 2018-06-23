@@ -9,6 +9,7 @@ import SideDots from '../components/SideDots/SideDots'
 import config from "../../data/SiteConfig"
 import Start from './Sekcje/start'
 import Fun from './Sekcje/fun'
+import '../layouts/fonts/LOUGRAMM.ttf'
 
 
 export default class IndexPage extends PureComponent {
