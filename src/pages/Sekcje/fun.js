@@ -1,6 +1,7 @@
 import React from 'react'
-import pil from '../../img/NNPilsudski.jpg'
+import mfoot from '../../img/mfoot.svg'
 import './fun.scss'
+
 
 const Fun = (props) => {
 
@@ -50,6 +51,7 @@ const Fun = (props) => {
                                     </li>
                                 </ol>
                             </div>
+                            
                             <div className="b box">
                                 <ol>
                                     <li>

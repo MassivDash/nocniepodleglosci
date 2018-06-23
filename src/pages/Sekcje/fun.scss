@@ -144,11 +144,15 @@ U {
     grid-area: c;
     background-color: #e53935;
 
+    p,span {color: white !important;}
+
 }
 
 .d {
     grid-area: d;
     background-color: #c62828;
+    
+    p,span {color: white !important;}
 
 }
 

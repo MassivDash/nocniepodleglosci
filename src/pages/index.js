@@ -146,7 +146,7 @@ setStartVisible4 = ({ isIntersecting }) => {
                                 mouseDragEnabled={true}
                                 playButtonEnabled={false}
                                 responsive={responsive}
-                                dotsDisabled={true}
+                                dotsDisabled={false}
                                 infinite={true}
                                 >
 

@@ -3,6 +3,7 @@ import PropTypes from 'prop-types'
 import Footer from '../components/Footer/Footer'
 import './all.sass'
 import './font-face.css'
+import './alice-carousel.scss'
 
 const TemplateWrapper = ({ children }) => (
   <div>
