@@ -54,12 +54,46 @@ setStartVisible4 = ({ isIntersecting }) => {
       
 
     const settings = {
-        dots: true,
         infinite: true,
-        speed: 500,
-        slidesToShow: 1,
-        slidesToScroll: 1
-      };
+      slidesToShow: 1,
+      slidesToScroll: 1,
+      initialSlide: 1,
+      centerPadding: '0',
+      speed: 500,
+      dots: true,
+      draggable: false,
+      responsive: [
+        {
+          breakpoint: 1024,
+          settings: {
+            slidesToShow: 3,
+            slidesToScroll: 3,
+            infinite: true,
+            
+          }
+        },
+        {
+          breakpoint: 600,
+          settings: {
+            centerMode: true,
+            slidesToShow: 1,
+            slidesToScroll: 1,
+            initialSlide: 0
+          }
+        },
+        {
+          breakpoint: 480,
+          settings: {
+            centerMode: true,
+            slidesToShow: 1,
+            slidesToScroll: 1,
+            initialSlide: 0
+          }
+        }
+      ]
+    
+    };
+      
     
     const Slides = posts.filter(post => post.node.frontmatter.templateKey === 'projekt-post')
     .map(({node: post, i}) => (
