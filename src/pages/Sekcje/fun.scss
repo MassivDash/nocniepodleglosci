@@ -62,8 +62,8 @@ U {
     grid-template-areas: 
     "a a a a g g" 
     "h h b b b b" 
-    "c c c l l l"
-    "d d d l l l" 
+    "c c c x l l"
+    "k d d d l l" 
     "o o o e e e" 
     "i f f f f p";
     grid-template-columns: repeat(6, auto);
@@ -77,6 +77,7 @@ U {
     grid-auto-rows: repeat(5, 1fr);
 }
 
+.k,
 .g,
 .h,
 .i,
@@ -103,6 +104,10 @@ U {
 }
 .i {
     grid-area: g;
+}
+
+.k {
+    grid-area: k
 }
 
 .p {
