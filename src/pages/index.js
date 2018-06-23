@@ -97,8 +97,8 @@ setStartVisible4 = ({ isIntersecting }) => {
     
     const Slides = posts.filter(post => post.node.frontmatter.templateKey === 'projekt-post')
     .map(({node: post, i}) => (
-        <div key={i}><Slide
-            key={i}
+        <div key={i+5}><Slide
+            key={i+1}
             myKey={post.fields.slug}
             thumbnail={post.frontmatter.thumbnail}
             title={post.frontmatter.title}
@@ -171,7 +171,8 @@ setStartVisible4 = ({ isIntersecting }) => {
                         </div>
 
                         <div className="columns">
-                                <div className="column flex">
+                                <div className="column">
+
                                     <div className="slider_wrapper">
                                 
                             <Slider {...settings} >
@@ -195,20 +196,20 @@ setStartVisible4 = ({ isIntersecting }) => {
                                     .filter(post => post.node.frontmatter.templateKey === 'cele-page')
                                     .map(({node: post}) => (
                                         <div className="content mycontent" key={post.id}>
-                                            <p>
+                                            <div>
                                                 <Link className="has-text-primary" to={post.fields.slug}>
                                                     {post.frontmatter.title}
                                                 </Link>
 
-                                            </p>
-                                            <p>
+                                            </div>
+                                            <div>
                                                 {post.excerpt}
                                                 <br/>
                                                 <br/>
                                                 <Link className="button is-small" to={post.fields.slug}>
                                                     Czytaj Więcej →
                                                 </Link>
-                                            </p>
+                                            </div>
                                         </div>
                                     ))}
 
