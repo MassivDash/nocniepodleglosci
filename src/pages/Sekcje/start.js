@@ -21,8 +21,8 @@ const Start = (props) => {
             <div className="fbicon"><a href="https://facebook.com/nocniepodleglosci/" target="_blanc"><img src={facebook} alt="noc niepodległości"/>/nocniepodleglosci/</a></div>
             <div className="Noc">
                 <img className="Noclogo" src={Noc} alt="Noc Niepodległsości"/><img className="NocNum" src={Numbers} alt="Noc Niepodległości"/>
-                <div className="NocTitle">
-                    Noc Niepodległości</div>
+                <div className="NocTitle"><h1>
+                    Noc Niepodległości</h1></div>
             </div>
         </div>
 

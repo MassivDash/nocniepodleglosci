@@ -132,8 +132,8 @@ setStartVisible4 = ({ isIntersecting }) => {
 
                         <div className="columns">
                             <div className="column">
-                                <div className="content">
-                                    <h1 className="has-text-weight-bold is-size-2">Nasze Projekty</h1>
+                                <div className="fun content">
+                                    <h2>Inicjatywy</h2>
                                 </div>
                             </div>
                         </div>
