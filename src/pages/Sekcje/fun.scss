@@ -197,7 +197,7 @@ U {
 
     li p {
         font: 22px/1.5 Helvetica, sans-serif;
-        padding: 70px 6vw;
+        padding: 70px 2vw;
         color: #161517;
 
     }
@@ -217,4 +217,18 @@ U {
          border-radius: 50%;
     }
 
+}
+
+.group {
+	
+    margin-left: 10px;
+    max-width: 175px;
+    margin-left: 3vw;
+    
+}
+
+.noc_icon {
+    max-width: 175px;
+    filter: brightness(0%);
+    margin-left: 3vw;
 }

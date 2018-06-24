@@ -2,7 +2,11 @@ import React from 'react'
 import mfoot from '../../img/mfoot.svg'
 import './fun.scss'
 import person from '../../img/person-walking.svg'
-
+import group from '../../img/group.svg'
+import noc from '../../img/noc.svg'
+import poland from '../../img/poland.svg'
+import heart from '../../img/heart.svg'
+import balloons from '../../img/balloons.svg'
 
 const Fun = (props) => {
 
@@ -32,9 +36,6 @@ const Fun = (props) => {
                                 możemy trochę mocniej zaimprezować gdyż 11 listopada jest dniem ustawowo wolnym
                                 od pracy.
                             </p>
-                            <div className="story">
-                            <img style={{maxWidth: '140px'}} src={person} alt="noc niepodelgłsci" />
-                            </div>
                         </div>
                     </div>
                 </div>
@@ -43,6 +44,7 @@ const Fun = (props) => {
                         <div className="content fungrid list fun">
 
                             <div className="a box">
+                            <img style={{maxWidth: '140px', marginLeft: '20px' }} src={person} alt="noc niepodelgłsci" />
                                 <ol>
                                     <li>
                                         <span></span>
@@ -59,6 +61,7 @@ const Fun = (props) => {
                             </div>
                             
                             <div className="b box">
+                                <img className="group" src={group} alt="noc niepodległości" />
                                 <ol>
                                     <li>
                                         <span></span>
@@ -69,6 +72,7 @@ const Fun = (props) => {
                                 </ol>
                             </div>
                             <div className="c box">
+                                <img className="noc_icon" src={noc} alt="noc ciepodległości" />
                                 <ol>
                                     <li>
                                         <span></span>
@@ -78,6 +82,7 @@ const Fun = (props) => {
                                 </ol>
                             </div>
                             <div className="d box">
+                            <img style={{maxWidth: '140px', marginLeft: '30px' }} src={poland} alt="noc niepodelgłsci" />
                                 <ol>
                                     <li>
                                         <span></span>
@@ -87,6 +92,7 @@ const Fun = (props) => {
                                 </ol>
                             </div>
                             <div className="e box">
+                            <img style={{maxWidth: '140px', marginLeft: '30px' }} src={heart} alt="noc niepodelgłsci" />
                                 <ol>
                                     <li>
                                         <span></span>
@@ -95,6 +101,8 @@ const Fun = (props) => {
                                 </ol>
                             </div>
                             <div className="f box">
+                            <img style={{maxWidth: '140px', marginLeft: '30px' }} src={balloons} alt="noc niepodelgłsci" />
+                               
                                 <ol>
                                     <li>
                                         <span></span>
