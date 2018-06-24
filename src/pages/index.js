@@ -113,7 +113,7 @@ setStartVisible4 = ({ isIntersecting }) => {
    );
 
    const style3 = (
-    this.state.inView3 ? 'section asfaltbackground m100vh visible' : 'section asfaltbackground m100vh notVisable'
+    this.state.inView4 ? 'section asfaltbackground m100vh visible' : 'section asfaltbackground m100vh notVisable'
 );
 
 
@@ -214,23 +214,16 @@ setStartVisible4 = ({ isIntersecting }) => {
                         <div className="separtor asfaltbackground"></div>
                         <div className="columns">
                             <div className="column">
-                                <div className="flex">
-                                <form 
-                                name="contact"
-                                method="post"
-                                data-netlify="true"
-                                data-netlify-honey="bot-field"
-                                >
-                                <input name="name" placeholder="Twoje imię" type="text" />
-                                <input name="email" placeholder="twoj@email.pl" type="email" />
-                                <button>Wyślij</button>
-                                </form></div>
+                                <div className="fun flex">
+                                <h2><a href="mailto:kontakt@nocniepodleglosci.pl">kontakt@nocniepodleglosci.pl</a></h2> 
 
+
+                            </div>
                             </div>
                             </div>
                             <div className="separtor asfaltbackground"></div>
                         <div className="columns">
-                            <div className="column">
+                            <div className="column is-one-third">
                             {posts
                                     .filter(post => post.node.frontmatter.templateKey === 'ofundacji-page')
                                     .map(({node: post}) => (
@@ -245,8 +238,8 @@ setStartVisible4 = ({ isIntersecting }) => {
                                                 {post.excerpt}
                                                 <br/>
                                                 <br/>
-                                                <Link className="button is-small" to={post.fields.slug}>
-                                                    Czytaj Więcej →
+                                                <Link className="button" to={post.fields.slug}>
+                                                    Czytaj Więcej 
                                                 </Link>
                                             </p>
                                         </div>
