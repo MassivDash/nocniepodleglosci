@@ -1,3 +1,5 @@
+$black: #000;
+
 .fun {
 
     display: flex;
@@ -68,7 +70,7 @@ U {
     "i f f f f p";
     grid-template-columns: repeat(6, auto);
     grid-column-gap: 15px;
-    grid-row-gap: 15px;
+    grid-row-gap: 80px;
     justify-content: space-around;
     align-items: center;
     font-size: 1.4rem;
@@ -125,6 +127,10 @@ U {
     align-items: center;
     min-width: 250px;
     min-height: 300px;
+    box-shadow: 0 19px 38px rgba($black, 0.3), 0 15px 12px rgba($black, 0.2);
+    background-image: url('/img/white_wall_hash.png');
+    background-repeat: repeat;
+    background-blend-mode: soft-light;
 
 }
 
@@ -158,13 +164,13 @@ U {
 
 .e {
     grid-area: e;
-    background-color: whitesomke;
-
+    background-color: #f51919;
+    p,span {color: white !important;}
 }
 .f {
     grid-area: f;
-    background-color: #f0513a;
-
+    background-color: #dc1515;
+    p,span {color: white !important;}
 }
 
 .list {
@@ -181,6 +187,9 @@ U {
         font: bold italic 45px/1.5 Helvetica, Verdana, sans-serif;
         margin-bottom: 20px;
         display: flex;
+        flex-direction: column;
+
+
         justify-content: center;
         align-items: center;
         height: 100%;
@@ -196,7 +205,16 @@ U {
     span {
         position: absolute;
         top: 7px;
-        left: 7px;
+        right: 7px;
+        display: block;
+	    float: left;
+	    margin: 0;
+	    width: 16px;
+	    height: 16px;
+         cursor: pointer;
+         background: transparent;
+         border: 2px solid  #161517;;
+         border-radius: 50%;
     }
 
 }

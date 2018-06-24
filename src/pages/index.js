@@ -158,7 +158,7 @@ setStartVisible4 = ({ isIntersecting }) => {
                 </Observer>
 
                 <Observer onChange={this.setStartVisible3} >
-                  <div>
+                  
                      <section className={style2} id="imprezy">
                     <div className="container">
 
@@ -183,8 +183,10 @@ setStartVisible4 = ({ isIntersecting }) => {
                         </div></div>
                     </div>
                 </section>
-                    </div>
+                   
                 </Observer>
+
+                <div className="separtor asfaltbackground"></div>
 
                 <Observer onChange={this.setStartVisible4} >
                 <section className={style3} id="kontakt">
@@ -192,32 +194,44 @@ setStartVisible4 = ({ isIntersecting }) => {
                         <div className="columns">
                             <div className="column">
 
-                                {posts
-                                    .filter(post => post.node.frontmatter.templateKey === 'cele-page')
-                                    .map(({node: post}) => (
-                                        <div className="content mycontent" key={post.id}>
-                                            <div>
-                                                <Link className="has-text-primary" to={post.fields.slug}>
-                                                    {post.frontmatter.title}
-                                                </Link>
+                                <div className="cta_holder">
+                                    <div className="fun cta_title">
+                                        <h2>Twoja <span>Impreza</span></h2>
+                                        <p><u>Napisz do nas</u>, a zamieścimy informacje o twoim wydarzeniu na naszej stronie.</p>
 
-                                            </div>
-                                            <div>
-                                                {post.excerpt}
-                                                <br/>
-                                                <br/>
-                                                <Link className="button is-small" to={post.fields.slug}>
-                                                    Czytaj Więcej →
-                                                </Link>
-                                            </div>
-                                        </div>
-                                    ))}
+                                    </div>
+                                </div>
+                               
 
                             </div>
 
                             <div className="column">
 
-                                {posts
+                                
+
+                            </div>
+                        </div>
+                        <div className="separtor asfaltbackground"></div>
+                        <div className="columns">
+                            <div className="column">
+                                <div className="flex">
+                                <form 
+                                name="contact"
+                                method="post"
+                                data-netlify="true"
+                                data-netlify-honey="bot-field"
+                                >
+                                <input name="name" placeholder="Twoje imię" type="text" />
+                                <input name="email" placeholder="twoj@email.pl" type="email" />
+                                <button>Wyślij</button>
+                                </form></div>
+
+                            </div>
+                            </div>
+                            <div className="separtor asfaltbackground"></div>
+                        <div className="columns">
+                            <div className="column">
+                            {posts
                                     .filter(post => post.node.frontmatter.templateKey === 'ofundacji-page')
                                     .map(({node: post}) => (
                                         <div className="content mycontent" key={post.id}>
@@ -236,13 +250,8 @@ setStartVisible4 = ({ isIntersecting }) => {
                                                 </Link>
                                             </p>
                                         </div>
-                                    ))}
-
+                                    ))}         
                             </div>
-                        </div>
-
-                        <div className="columns">
-                            <div className="column"></div>
                         </div>
                     </div>
                 </section>
