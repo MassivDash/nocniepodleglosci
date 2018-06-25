@@ -61,7 +61,7 @@ const Fun = (props) => {
                             </div>
                             
                             <div className="b box">
-                                <img className="group" src={group} alt="noc niepodległości" />
+                                <img className="fun_icon" src={group} alt="noc niepodległości" />
                                 <ol>
                                     <li>
                                         <span></span>

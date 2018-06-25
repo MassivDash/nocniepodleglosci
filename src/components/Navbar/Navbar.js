@@ -45,13 +45,13 @@ class Navbar extends Component {
       <Link className="navbar-item" to="/"  onClick={this.closeNav.bind(this)}>
           Strona Głowna
         </Link>
-      <Link className="navbar-item" to="/projekty"  onClick={this.closeNav.bind(this)}>
-          Imprezy
+      <Link className="navbar-item" to="/#zacznijzabawe"  onClick={this.closeNav.bind(this)}>
+          Zacznij Zabawę
         </Link>
-        <Link className="navbar-item" to="/ofundacji"  onClick={this.closeNav.bind(this)} >
+        <Link className="navbar-item" to="/#imprezy"  onClick={this.closeNav.bind(this)} >
           O projekcie
         </Link>
-        <Link className="navbar-item" to="/kontakt"  onClick={this.closeNav.bind(this)}>
+        <Link className="navbar-item" to="/#kontakt"  onClick={this.closeNav.bind(this)}>
           Kontakt
         </Link>
       </div>
