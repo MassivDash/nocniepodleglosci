@@ -44,7 +44,7 @@ const Fun = (props) => {
                         <div className="content fungrid list fun">
 
                             <div className="a box">
-                            <img style={{maxWidth: '140px', marginLeft: '20px' }} src={person} alt="noc niepodelgłsci" />
+                            <img className="fun_icon" src={person} alt="noc niepodelgłsci" />
                                 <ol>
                                     <li>
                                         <span></span>
@@ -72,7 +72,7 @@ const Fun = (props) => {
                                 </ol>
                             </div>
                             <div className="c box">
-                                <img className="noc_icon" src={noc} alt="noc ciepodległości" />
+                                <img className="fun_icon" src={noc} alt="noc ciepodległości" />
                                 <ol>
                                     <li>
                                         <span></span>
@@ -82,7 +82,7 @@ const Fun = (props) => {
                                 </ol>
                             </div>
                             <div className="d box">
-                            <img style={{maxWidth: '140px', marginLeft: '30px' }} src={poland} alt="noc niepodelgłsci" />
+                            <img className="fun_icon" src={poland} alt="noc niepodelgłsci" />
                                 <ol>
                                     <li>
                                         <span></span>
@@ -92,7 +92,7 @@ const Fun = (props) => {
                                 </ol>
                             </div>
                             <div className="e box">
-                            <img style={{maxWidth: '140px', marginLeft: '30px' }} src={heart} alt="noc niepodelgłsci" />
+                            <img className="fun_icon" src={heart} alt="noc niepodelgłsci" />
                                 <ol>
                                     <li>
                                         <span></span>
@@ -101,7 +101,7 @@ const Fun = (props) => {
                                 </ol>
                             </div>
                             <div className="f box">
-                            <img style={{maxWidth: '140px', marginLeft: '30px' }} src={balloons} alt="noc niepodelgłsci" />
+                            <img className="fun_icon" src={balloons} alt="noc niepodelgłsci" />
                                
                                 <ol>
                                     <li>

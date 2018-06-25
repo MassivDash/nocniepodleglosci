@@ -223,7 +223,7 @@ setStartVisible4 = ({ isIntersecting }) => {
                             </div>
                             <div className="separtor asfaltbackground"></div>
                         <div className="columns">
-                            <div className="column is-one-third">
+                            <div className="column is-one-third is-offset-8">
                             {posts
                                     .filter(post => post.node.frontmatter.templateKey === 'ofundacji-page')
                                     .map(({node: post}) => (

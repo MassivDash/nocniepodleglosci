@@ -1,74 +1,140 @@
-.Noc 
-  display: flex
-  flex-wrap: wrap
-  height: 70vh
-  width: 100%
-  justify-content: space-between
-  align-items: center
-
-.Noclogo 
-  width: 48% 
-  
-
-.NocNum 
-  width: 48%
-  animation: blink linear infinite 5s
-  margin-top: 5px 
-
-.NocTitle
-  font-size: 4em
-  color: whitesmoke
-  width: 100%
-  text-align: left
-  margin-top: -20vh
-  font-family: 30px/4 Helvetica, sans-serif
-  
-.startfun 
-  position: absolute
-  bottom: 5vh
-  right: 40vw
-
-  button 
-    background: #f0513a
-    border-radius: 15px
-    height: 5vh
-    width: 10vw
-    border: 0
-    color: whitesmoke
-    text-transform: uppercase
-    cursor: pointer
-
-    a 
-      color: whitesmoke
-
-  button:hover, button:focus
-    outline: none
-    background: black
-    transition: 0.3s ease-out
-
-
-.navbar-item
-  color: #fff
-
-
-.fbicon 
-  position: absolute
-  
-  align-content: center 
-  top: 20px
-  right: 30px
-  
-
-  a 
+@media(max-width: 986px)
+  .Noc
     display: flex
+    flex-wrap: wrap
+    height: 70vh
+    width: 100%
+    justify-content: center
+    align-items: center
+    flex-direction: column
+
+  .Noclogo 
+    width: 48% 
+  
+
+  .NocNum 
+    width: 48%
+    animation: blink linear infinite 5s
+    margin-top: 5px 
+
+  .NocTitle
+    font-size: 2em
+    color: whitesmoke
+    width: 100%
+    text-align: center
+    font-family: Helvetica, sans-serif
+  
+  .startfun 
+    display: flex
+    justify-content: center
+    
+
+    button 
+      background: #f0513a
+      border-radius: 15px
+      height: 50px
+      width: 150px
+      border: 0
+      color: whitesmoke
+      text-transform: uppercase
+      cursor: pointer
+      margin-bottom: 20px
+
+      a
+        color: whitesmoke
+
+    button:hover, button:focus
+      outline: none
+      background: black
+      transition: 0.3s ease-out
+
+  .fbicon 
+    position: absolute
+    align-content: center 
+    top: -40px
+    margin-right: 5px
+    
+  
+    a 
+      display: flex
+      justify-content: space-between
+      align-items: center
+      width: 11vw
+      color: whitesmoke
+      cursor: pointer
+
+    img 
+      max-width: 45px 
+      margin-right: 10px
+  
+  
+
+@media(min-width: 986px)
+  .Noc
+    display: flex
+    flex-wrap: wrap
+    height: 70vh
+    width: 100%
     justify-content: space-between
     align-items: center
-    width: 11vw
-    color: whitesmoke
-    cursor: pointer
 
-  img 
-    max-width: 45px 
+  .Noclogo 
+    width: 48% 
+  
+
+  .NocNum 
+    width: 48%
+    animation: blink linear infinite 5s
+    margin-top: 5px 
+
+  .NocTitle
+    font-size: 4em
+    color: whitesmoke
+    width: 100%
+    text-align: left
+    margin-top: -20vh
+    font-family: 30px/4 Helvetica, sans-serif
+  
+  .startfun 
+    position: absolute
+    bottom: 5vh
+    right: 40vw
+
+    button 
+      background: #f0513a
+      border-radius: 15px
+      height: 5vh
+      width: 10vw
+      border: 0
+      color: whitesmoke
+      text-transform: uppercase
+      cursor: pointer
+
+      a 
+        color: whitesmoke
+
+    button:hover, button:focus
+      outline: none
+      background: black
+      transition: 0.3s ease-out
+
+  .fbicon 
+    position: absolute
+    align-content: center 
+    top: 20px
+    right: 30px
+  
+
+    a 
+      display: flex
+      justify-content: space-between
+      align-items: center
+      width: 11vw
+      color: whitesmoke
+      cursor: pointer
+
+    img 
+      max-width: 45px 
   
   
   

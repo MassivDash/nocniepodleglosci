@@ -6,50 +6,10 @@
     padding: 0
     margin: 0
     position: relative
-    display: block
-    
-.slider_wrapper 
-    max-width: 70vw
-    position: relative
-    justify-content: center
-    align-items: center
-    border-radius: 7px
-
-.slider_description 
-   	color: whitesmoke
-    margin: 10px 0
-    min-height: 13vw
-    position: absolute
-    top: -10px
-    width: 100%
-    height: 100%
-    right: 0
-    max-width: 19vw
-    background-color: rgba(24, 10, 0, 0.7)
-    padding: 8em 1em
+ 
 
 
-.slider_title
-    font-family: "LOUGRAMM"
-    padding: 2em 0
-    font-size: 1.5em
-    color: #f0513a
-    top: 2vh
-    left: 3vw
 
-    p 
-      margin-left: 20px
-      text-transform: uppercase
-
-
-.slider_date 
-    margin-left: 20px
-    text-transform: uppercase
-    height: 30px
-    display: flex
-    justify-content: center
-    align-content: center
-    position: absolute
 
 @media (min-width:1024px)
     .myslide
@@ -61,7 +21,68 @@
             color: whitesmoke
             border: 0
             border-bottom: 2px solid #f0513a
+       
+    .slider_wrapper 
+        max-width: 75vw
+        position: relative
+        justify-content: center
+        align-items: center
 
-@media (max-width: 1024px)
+    .slider_description
+        color: whitesmoke
+        margin: 10px 0
+        min-height: 13vw
+        position: absolute
+        top: -10px
+        width: 100%
+        height: 100%
+        right: 0
+        max-width: 19vw
+        background-color: rgba(24, 10, 0, 0.7)
+        padding: 8em 1em
+
+    .slider_title 
+        font-family: "LOUGRAMM"
+        padding: 2em 0
+        font-size: 1.5em
+        color: #f0513a
+        top: 2vh
+        left: 3vw
+
+        p 
+            margin-left: 20px
+            text-transform: uppercase
+
+@media (max-width:1024px)
     .myslide
-        height: 100%  
+        min-height: 200px
+        .button 
+            background: none
+            color: whitesmoke
+            border: 0
+            border-bottom: 2px solid #f0513a
+       
+    .slider_wrapper 
+        max-width: 80vw
+        position: relative
+        justify-content: center
+        align-items: center
+
+    .slider_description
+        color: whitesmoke
+        width: 100%
+        height: 100%
+        padding: 1em 0.5em
+        min-height: 55vh
+
+    .slider_title 
+        font-family: "LOUGRAMM"
+        padding: 2em 0
+        font-size: 1.5em
+        color: black
+        top: 2vh
+        left: 3vw
+
+        p 
+            margin-left: 20px
+            text-transform: uppercase 

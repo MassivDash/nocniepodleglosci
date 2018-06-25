@@ -16,7 +16,7 @@ const Footer = () => (
         <div className="column">
           <div className="logofoot">
         <Link to="/" >
-          <figure className="image is-64x64">
+          <figure className="image is-64x64" style={{filter: 'invert(100%)'}}>
             <img src={logo} alt="Fundacja Idea Nowa"  />
           </figure>
         </Link>
@@ -43,6 +43,11 @@ const Footer = () => (
 
         
         
+        <a href="https://facebook.com/nocniepodleglosci" className="navbar-item" >
+          <figure className="image is-24x24">
+            <img src={fb} alt="Fundacja Nowa Idea"  />
+          </figure>
+        </a>
         <a href="mailto:fundacja@nowaidea.org.pl" className="navbar-item" >
           <figure className="image is-24x24">
             <img src={mail} alt="Fundacja Nowa Idea"  />
@@ -60,18 +65,15 @@ const Footer = () => (
           <Link  to="/">
             Strona Głowna
           </Link>
-        <Link  to="/projekty">
-            Projekty
-          </Link>
+        <a  href="/#imprezy">
+            Imprezy
+          </a>
           <Link to="/ofundacji">
             O fundacji
           </Link>
-          <Link  to="/cele">
-            Cele
-          </Link>
-          <Link  to="/kontakt">
+          <a  href="/#kontakt">
             Kontakt
-          </Link>
+          </a>
           </div>
         </div>
         </div>
