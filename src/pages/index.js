@@ -169,7 +169,7 @@ setStartVisible4 = ({ isIntersecting }) => {
                                 </div>
                             </div>
                         </div>
-
+                        <div className="separtor asfaltbackground"></div>
                         <div className="columns">
                                 <div className="column">
 
