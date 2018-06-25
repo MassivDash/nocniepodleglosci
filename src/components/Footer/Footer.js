@@ -65,15 +65,19 @@ const Footer = () => (
           <Link  to="/">
             Strona Głowna
           </Link>
+          <a  href="/#zacznijzabawe">
+            Zacznij zabawę
+          </a>
         <a  href="/#imprezy">
-            Imprezy
+            Inicjatwy
+          </a>
+          <a  href="/#kontakt">
+            Zgłoś się
           </a>
           <Link to="/ofundacji">
             O fundacji
           </Link>
-          <a  href="/#kontakt">
-            Kontakt
-          </a>
+          
           </div>
         </div>
         </div>

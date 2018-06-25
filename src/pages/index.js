@@ -215,7 +215,8 @@ setStartVisible4 = ({ isIntersecting }) => {
                         <div className="columns">
                             <div className="column">
                                 <div className="fun flex">
-                                <h2><a href="mailto:kontakt@nocniepodleglosci.pl">kontakt@nocniepodleglosci.pl</a></h2> 
+                                <h2>Nasz Email to</h2>
+                                    <a href="mailto:kontakt@nocniepodleglosci.pl">kontakt@nocniepodleglosci.pl</a> 
 
 
                             </div>

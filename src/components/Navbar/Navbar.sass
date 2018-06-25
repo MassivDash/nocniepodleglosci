@@ -1,6 +1,8 @@
 @media (max-width: 986px)
   .navbar-item 
-    color: red !important
+    color: #e53935 !important
+    text-align: center
+    font-family: LOUGRAMM
 
   .navbar
     background: transparent !important
@@ -10,22 +12,28 @@
 
   .navbar.is-fixed-top
     .navbar-menu
-      height: 70%
-      margin-top: 15px
-      transition: transform 0.3s ease-out
+      height: 100%
+      margin-top: -200px
+      transition: transform 0.4s ease-out
+
+  .navbar-menu 
+    background: tranparent !important
       
     
   .navbar-start
-    height: 70% 
+    top: 0
+    left: 0
+    height: 100% 
     display: flex
     flex-direction: column
     justify-content: space-evenly
     position: fixed
-    background: white
+    background: rgba(0,0,0,0.8)
     width: 100%
     transition: transform 0.3s ease-in
     padding-top: 2em
     color: black
+    z-index: 1
 
   .navbar-end
       display: flex
@@ -35,9 +43,38 @@
 
   .navbar-start.is-active,
     transform: translateX(0)
+    opacity: 1
+    transition: 0.3s ease-out
 
 @media (min-width:986px)
   .navbar
     display: none !important
   
-  
+
+.navbar-burger 
+    cursor: pointer
+    display: block
+    height: 3.25rem
+    position: relative
+    width: 3.25rem
+    margin-left: auto
+    border: 2px solid !important
+    border-radius: 100% !important
+    border-bottom-color: #e53935 !important
+    transition: 0.7s ease-out
+    z-index: 3
+
+.navbar-burger:hover, .navbar-burger:focus
+  border-color: whitesmoke !important
+  outline: none !important
+  color: whitesmoke
+  z-index: 3
+
+
+.is-active 
+  background-color: rgba(0,0,0,0.8)
+
+  span 
+    background-color: white
+    color: white
+

@@ -49,7 +49,7 @@ class Navbar extends Component {
           Zacznij Zabawę
         </Link>
         <Link className="navbar-item" to="/#imprezy"  onClick={this.closeNav.bind(this)} >
-          O projekcie
+          Inicjatywy
         </Link>
         <Link className="navbar-item" to="/#kontakt"  onClick={this.closeNav.bind(this)}>
           Kontakt
