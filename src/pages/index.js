@@ -66,8 +66,8 @@ setStartVisible4 = ({ isIntersecting }) => {
         {
           breakpoint: 1024,
           settings: {
-            slidesToShow: 3,
-            slidesToScroll: 3,
+            slidesToShow: 1,
+            slidesToScroll: 1,
             infinite: true,
             
           }
@@ -75,19 +75,19 @@ setStartVisible4 = ({ isIntersecting }) => {
         {
           breakpoint: 600,
           settings: {
-            centerMode: true,
+            
             slidesToShow: 1,
             slidesToScroll: 1,
-            initialSlide: 0
+            
           }
         },
         {
           breakpoint: 480,
           settings: {
-            centerMode: true,
+            
             slidesToShow: 1,
             slidesToScroll: 1,
-            initialSlide: 0
+            
           }
         }
       ]
