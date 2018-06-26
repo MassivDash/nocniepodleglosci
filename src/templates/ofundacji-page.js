@@ -1,6 +1,6 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import Link from 'Gatsby-Link'
+import Link from 'gatsby-link'
 import Helmet from 'react-helmet'
 import Content, { HTMLContent } from '../components/Content'
 import SEO from '../components/SEO/seo';
