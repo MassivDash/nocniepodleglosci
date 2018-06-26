@@ -127,7 +127,7 @@ setStartVisible4 = ({ isIntersecting }) => {
                     <meta property="og:url" content="Noc Niepodległości | 10/11"/>
                     <meta property="og:type" content="website"/>
                     <meta property="og:title" content="Noc Niepodległości | 10/11"/>
-                    <meta property="og:description" content="Noc Niepodległości | 10/11"/>
+                    <meta property="og:description" content="Zapraszamy do wspólnej zabawy z okazji Święta Niepodległości !"/>
                     <meta property="og:image" content={config.siteLogo}/>
 
                     <meta name="twitter:title" content="Noc Niepodległości | 10/11"/>
