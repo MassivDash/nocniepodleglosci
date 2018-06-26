@@ -2,8 +2,8 @@ module.exports = {
   blogPostDir: "projekt", // The name of directory that contains your posts.
   siteTitle: "NOC NIEPODLEGŁOŚCI 11 / 10", // Site title.
   siteTitleAlt: "NOC NIEPODLEGŁOŚCI 11 / 10", // Alternative site title for SEO.
-  siteLogo: "static/img/noc_10_11_kwadrat.jpg", // Logo used for SEO and manifest.
-  siteUrl: "https://nocniepodleglosci.pl", // Domain of your website without pathPrefix.
+  siteLogo: "https://nocniepodleglosci.netlify.com/img/noc_10_11_kwadrat.jpg", // Logo used for SEO and manifest.
+  siteUrl: "https://nocniepodleglosci.netlify.com/", // Domain of your website without pathPrefix.
   pathPrefix: "", // Prefixes all links. For cases when deployed to example.github.io/gatsby-advanced-starter/.
   siteDescription: "Zapraszamy do wspólnej zabawy z okazji Święta Niepodległości !", // Website description used for RSS feeds/meta description tag.
   postDefaultCategoryID: "Social", // Default category for posts.
