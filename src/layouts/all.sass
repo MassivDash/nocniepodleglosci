@@ -61,12 +61,6 @@ body
   overflow: visible
 
 
-
-@media (min-width:986px)
-  .container.has-text-centered 
-    padding: 2em 4em
-
- 
 .has-text-primary
   font-weight: bold
 
@@ -162,24 +156,49 @@ input
   border: 0
   border-bottom: 2px solid #f0513a
 
-button 
-  background: #f0513a
-  border-radius: 15px
-  height: 5vh
-  width: 10vw
-  border: 0
-  color: whitesmoke
-  text-transform: uppercase
-  cursor: pointer
+.projekt
+  strong 
+    color: whitesmoke
+
+@media (min-width:986px)
+  .container.has-text-centered 
+    padding: 2em 4em
+  
+  button
+    background: #f0513a
+    border-radius: 15px
+    height: 5vh
+    width: 10vw
+    border: 0
+    color: whitesmoke
+    text-transform: uppercase
+    cursor: pointer
 
   a 
     color: whitesmoke
 
-button:hover, button:focus
-  outline: none
-  background: black
-  transition: 0.3s ease-out
+  button:hover, button:focus 
+    outline: none
+    background: black
+    transition: 0.3s ease-out
 
-.projekt
-  strong 
+@media (max-width:986px)
+  .container.has-text-centered 
+    padding: 2em 4em
+  
+  button
+    background: #f0513a
+    border-radius: 15px
+    border: 0
     color: whitesmoke
+    text-transform: uppercase
+    cursor: pointer
+    width: 8em
+    height: 4em
+  a 
+    color: whitesmoke
+
+  button:hover, button:focus 
+    outline: none
+    background: black
+    transition: 0.3s ease-out
