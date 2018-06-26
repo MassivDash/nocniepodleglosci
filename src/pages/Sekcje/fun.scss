@@ -26,6 +26,7 @@ $black: #000;
     p {
         margin: 3em auto;
         max-width: 90vw;
+        color: black
     }
 
     a {
@@ -36,6 +37,11 @@ $black: #000;
 
     span {
         color: #f0513a;
+    }
+
+    strong {
+        color: black;
+
     }
 
 }

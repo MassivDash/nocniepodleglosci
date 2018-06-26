@@ -1,10 +1,11 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import { kebabCase } from 'lodash'
+import Link from 'Gatsby-Link'
 import Helmet from 'react-helmet'
 import Content, { HTMLContent } from '../components/Content'
 import SEO from '../components/SEO/seo';
 import config from "../../data/SiteConfig";
+import GatsbyLink from 'gatsby-link';
 
 export const OfundacjiPageTemplate = ({ 
   title, 
@@ -25,7 +26,8 @@ export const OfundacjiPageTemplate = ({
   className="hero is-info is-small " style={{
     background: "url(" + thumbnail + ")",
     backgroundSize: "cover",
-    backgroundPosition: "bottom"
+    backgroundPosition: "bottom",
+    filter: "invert(100%)"
       }}>
   <div className="hero-body">
     <div className="container">
@@ -45,7 +47,9 @@ export const OfundacjiPageTemplate = ({
           <div className="column is-10 is-offset-1">
             <div className="section">
               
-              <PageContent className="content" content={content} />
+              <PageContent className="content" content={content} className="content projekt" />
+              <div className="separtor asfaltbackground"></div>
+              <Link to="/"><button>Wroc</button></Link>
             </div>
           </div>
         </div>

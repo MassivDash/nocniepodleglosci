@@ -11,51 +11,51 @@ export const ProjektPostTemplate = ({
   content,
   contentComponent,
   description,
-  tags,
   title,
-  helmet,
   thumbnail,
   slug,
-  date,
   postNode,
-  postPath
+  
 }) => {
   const PostContent = contentComponent || Content
 
   return (
     <div>
-    {helmet}
+    <Helmet title={`${title} | ${config.siteTitle}`}/>
     <SEO postPath={slug} postNode={postNode} postSEO />
     <section 
-  className="hero is-info is-medium " style={{
+  className="hero is-medium " style={{
     background: "url(" + thumbnail + ")",
     backgroundSize: "cover",
-    backgroundPosition: "bottom"
+    backgroundPosition: "bottom",
+    minHeight: "40vh" 
       }}>
-  <div className="hero-body">
+  
+</section>
+    <section className="section">
+    
     <div className="container">
       <div className="columns">
            <div className="column"> 
-            <div className="mytitle">
-              {title}
-              
+            <div className="fun">
+              <h2>{title}</h2>
               </div>
-              <p>{description}</p>
+              
           </div>
   </div>
   </div>
-  </div>
-</section>
-    <section className="section">
-      
+ 
     
       <div className="container content">
         <div className="columns">
           <div className="column is-10 is-offset-1">
           
-            
-            <PostContent content={content} />
-           
+          <p>{description}</p>
+            <PostContent content={content} className="projekt"/>
+      <div className="separtor asfaltbackground"></div>
+      <Link to="/"><button>Wroc</button></Link>
+          
+          
           </div>
         </div>
       </div>
@@ -80,7 +80,6 @@ const ProjektPost = ({ data }) => {
       content={post.html}
       contentComponent={HTMLContent}
       description={post.frontmatter.description}
-      helmet={<Helmet title={`${post.frontmatter.title} | ${config.siteTitle}`}/>}
       tags={post.frontmatter.tags}
       title={post.frontmatter.title}
       slug={post.fields.slug}
