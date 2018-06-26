@@ -30,7 +30,6 @@
     position: fixed
     background: rgba(0,0,0,0.8)
     width: 100%
-    transition: transform 0.5s ease-in
     padding-top: 2em
     color: black
     z-index: 1
@@ -40,10 +39,11 @@
     
   .navbar-start.is-close
     opacity: 0
+    transition: opacity 0.5s ease-in
     
 
   .navbar-start.is-active,
-    
+    transition: opacity 0.5s ease-in
     opacity: 1
     
 
