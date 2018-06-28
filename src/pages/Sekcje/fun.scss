@@ -84,6 +84,8 @@ U {
     
 }
 
+@supports (display: grid) {
+
 .fungrid {
     display: grid;
     grid-template-areas: 
@@ -102,6 +104,25 @@ U {
     padding-top: 100px;
     grid-column: auto;
     
+}
+}
+
+@supports not (display: grid) {
+    .fungrid {
+        display: flex;
+        flex-direction: column;
+        flex-grow: 1;
+        justify-content: center;
+        align-items: center;
+        font-size: 1.4rem;
+        padding-top: 100px;
+        
+        
+    }
+
+    .box {
+        margin: 2em auto;
+    }
 }
 
 .k,
@@ -140,6 +161,9 @@ U {
 .p {
     grid-area: p;
 }
+
+
+
 
 .box {
 
