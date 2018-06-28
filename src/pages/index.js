@@ -10,6 +10,8 @@ import config from "../../data/SiteConfig"
 import Start from './Sekcje/start'
 import Fun from './Sekcje/fun'
 import '../layouts/fonts/LOUGRAMM.ttf'
+import 'intersection-observer';
+
 
 
 export default class IndexPage extends PureComponent {
