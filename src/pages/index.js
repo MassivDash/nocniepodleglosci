@@ -1,18 +1,15 @@
-import React, {PureComponent} from 'react'
-import PropTypes from 'prop-types'
-import Helmet from 'react-helmet'
-import Observer from '@researchgate/react-intersection-observer'
-import Link from 'gatsby-link'
-import Slider from "react-slick"
-import Slide from '../components/Slide/Slide'
-import SideDots from '../components/SideDots/SideDots'
-import config from "../../data/SiteConfig"
-import Start from './Sekcje/start'
-import Fun from './Sekcje/fun'
-import '../layouts/fonts/LOUGRAMM.ttf'
-
-
-
+import React, {PureComponent} from 'react';
+import PropTypes from 'prop-types';
+import Helmet from 'react-helmet';
+import Observer from '@researchgate/react-intersection-observer';
+import Link from 'gatsby-link';
+import Slider from 'react-slick';
+import Slide from '../components/Slide/Slide';
+import SideDots from '../components/SideDots/SideDots';
+import config from '../../data/SiteConfig';
+import Start from './Sekcje/start';
+import Fun from './Sekcje/fun';
+import '../layouts/fonts/LOUGRAMM.ttf';
 
 export default class IndexPage extends PureComponent {
     state = {
@@ -23,21 +20,20 @@ export default class IndexPage extends PureComponent {
         inView4: false
     };
 
-    setStartVisible1 = ({ isIntersecting }) => {
-        this.setState({inView1:  isIntersecting })
+    setStartVisible1 = ({isIntersecting}) => {
+        this.setState({inView1: isIntersecting});
     }
 
-    setStartVisible2 = ({ isIntersecting }) => {
-      this.setState({inView2:  isIntersecting })
-  }
+    setStartVisible2 = ({isIntersecting}) => {
+        this.setState({inView2: isIntersecting});
+    }
 
-  setStartVisible3 = ({ isIntersecting }) => {
-    this.setState({inView3:  isIntersecting })
-}
-setStartVisible4 = ({ isIntersecting }) => {
-  this.setState({inView4:  isIntersecting })
-}
-
+    setStartVisible3 = ({isIntersecting}) => {
+        this.setState({inView3: isIntersecting});
+    }
+    setStartVisible4 = ({isIntersecting}) => {
+        this.setState({inView4: isIntersecting});
+    }
 
     render() {
 
@@ -47,77 +43,66 @@ setStartVisible4 = ({ isIntersecting }) => {
             require('smooth-scroll')('a[href*="#"]');
         }
 
-       
+        const {data} = this.props;
+        const {edges: posts} = data.allMarkdownRemark;
 
-        const {data} = this.props
-        const {edges: posts} = data.allMarkdownRemark
-
-           
-      
-
-    const settings = {
-        infinite: true,
-      slidesToShow: 1,
-      slidesToScroll: 1,
-      initialSlide: 1,
-      centerPadding: '0',
-      speed: 500,
-      dots: true,
-      draggable: false,
-      responsive: [
-        {
-          breakpoint: 1024,
-          settings: {
-            slidesToShow: 1,
-            slidesToScroll: 1,
+        const settings = {
             infinite: true,
-            
-          }
-        },
-        {
-          breakpoint: 600,
-          settings: {
-            
             slidesToShow: 1,
             slidesToScroll: 1,
-            
-          }
-        },
-        {
-          breakpoint: 480,
-          settings: {
-            
-            slidesToShow: 1,
-            slidesToScroll: 1,
-            
-          }
-        }
-      ]
-    
-    };
-      
-    
-    const Slides = posts.filter(post => post.node.frontmatter.templateKey === 'projekt-post')
-    .map(({node: post, i}) => (
-        <div key={i+5}><Slide
-            key={i+1}
-            myKey={post.fields.slug}
-            thumbnail={post.frontmatter.thumbnail}
-            title={post.frontmatter.title}
-            date={post.frontmatter.date}
-            excerpt={post.excerpt}
-            slug={post.fields.slug}
-            description={post.frontmatter.description}/></div>
-    ));
+            initialSlide: 1,
+            centerPadding: '0',
+            speed: 500,
+            dots: true,
+            draggable: false,
+            responsive: [
+                {
+                    breakpoint: 1024,
+                    settings: {
+                        slidesToShow: 1,
+                        slidesToScroll: 1,
+                        infinite: true
+                    }
+                }, {
+                    breakpoint: 600,
+                    settings: {
 
-    const style2 = (
-        this.state.inView3 ? 'section asfaltbackground m100vh visible' : 'section asfaltbackground m100vh notVisable'
-   );
+                        slidesToShow: 1,
+                        slidesToScroll: 1
+                    }
+                }, {
+                    breakpoint: 480,
+                    settings: {
 
-   const style3 = (
-    this.state.inView4 ? 'section asfaltbackground m100vh visible' : 'section asfaltbackground m100vh notVisable'
-);
+                        slidesToShow: 1,
+                        slidesToScroll: 1
+                    }
+                }
+            ]
 
+        };
+
+        const Slides = posts
+            .filter(post => post.node.frontmatter.templateKey === 'projekt-post')
+            .map(({node: post, i}) => (
+                <div key={i + 5}><Slide
+                    key={i + 1}
+                    myKey={post.fields.slug}
+                    thumbnail={post.frontmatter.thumbnail}
+                    title={post.frontmatter.title}
+                    date={post.frontmatter.date}
+                    excerpt={post.excerpt}
+                    slug={post.fields.slug}
+                    description={post.frontmatter.description}/></div>
+            ));
+
+        const style2 = (this.state.inView3
+            ? 'section asfaltbackground m100vh visible'
+            : 'section asfaltbackground m100vh notVisable');
+
+        const style3 = (this.state.inView4
+            ? 'section asfaltbackground m100vh visible'
+            : 'section asfaltbackground m100vh notVisable');
 
         return (
 
@@ -126,15 +111,15 @@ setStartVisible4 = ({ isIntersecting }) => {
                     <title>
                         Noc Niepodległości | 10/11
                     </title>
-                    <meta property="og:url" content={config.siteUrl} />
+                    <meta property="og:url" content={config.siteUrl}/>
                     <meta property="og:type" content="website"/>
-                    <meta property="og:title" content={config.siteTitle} />
-                    <meta property="og:description" content={config.siteDescription} />
+                    <meta property="og:title" content={config.siteTitle}/>
+                    <meta property="og:description" content={config.siteDescription}/>
                     <meta property="og:image" content={config.siteLogo}/>
 
                     <meta name="twitter:title" content={config.siteTitle}/>
                     <meta name="twitter:description" content={config.siteDescription}/>
-                    <meta property="og:description" content={config.siteDescription} />
+                    <meta property="og:description" content={config.siteDescription}/>
                     <meta name="twitter:image" content={config.siteUrl}/>
                     <meta name="twitter:card" content="summary_large_image"/>
 
@@ -144,116 +129,114 @@ setStartVisible4 = ({ isIntersecting }) => {
                     dot1={this.state.inView1}
                     dot2={this.state.inView2}
                     dot3={this.state.inView3}
-                    dot4={this.state.inView4} />
-                <Observer  onChange={this.setStartVisible1} >
-                   <div>
-                    <Start isVisible={this.state.inView1}/>
-                   </div>
+                    dot4={this.state.inView4}/>
+                <Observer onChange={this.setStartVisible1}>
+                    <div>
+                        <Start isVisible={this.state.inView1}/>
+                    </div>
                 </Observer>
 
                 <div className="separtor asfaltbackground"></div>
 
-                <Observer onChange={this.setStartVisible2}  >
-                  <div>
-                    <Fun isVisible={this.state.inView2}/>
+                <Observer onChange={this.setStartVisible2}>
+                    <div>
+                        <Fun isVisible={this.state.inView2}/>
                     </div>
                 </Observer>
 
-                <Observer onChange={this.setStartVisible3} >
-                  
-                     <section className={style2} id="imprezy">
-                    <div className="container">
+                <Observer onChange={this.setStartVisible3}>
 
-                        <div className="columns">
-                            <div className="column">
-                                <div className="fun content">
-                                    <h2>Inicjatywy</h2>
+                    <section className={style2} id="imprezy">
+                        <div className="container">
+
+                            <div className="columns">
+                                <div className="column">
+                                    <div className="fun content">
+                                        <h2>Inicjatywy</h2>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
-                        <div className="separtor asfaltbackground"></div>
-                        <div className="columns">
+                            <div className="separtor asfaltbackground"></div>
+                            <div className="columns">
                                 <div className="column">
 
                                     <div className="slider_wrapper">
-                                
-                            <Slider {...settings} >
 
-                                {Slides}
-                            </Slider>
+                                        <Slider {...settings}>
+
+                                            {Slides}
+                                        </Slider>
+                                    </div>
+                                </div>
                             </div>
-                        </div></div>
-                    </div>
-                </section>
-                   
+                        </div>
+                    </section>
+
                 </Observer>
 
                 <div className="separtor asfaltbackground"></div>
 
-                <Observer onChange={this.setStartVisible4} >
-                <section className={style3} id="kontakt">
-                    <div className="container">
-                        <div className="columns">
-                            <div className="column">
+                <Observer onChange={this.setStartVisible4}>
+                    <section className={style3} id="kontakt">
+                        <div className="container">
+                            <div className="columns">
+                                <div className="column">
 
-                                <div className="cta_holder">
-                                    <div className="fun cta_title">
-                                        <h2>Twoja <span>Impreza</span></h2>
-                                        <p><u>Napisz do nas</u>, a zamieścimy informacje o twoim wydarzeniu na naszej stronie.</p>
+                                    <div className="cta_holder">
+                                        <div className="fun cta_title">
+                                            <h2>Twoja
+                                                <span>Impreza</span>
+                                            </h2>
+                                            <p>
+                                                <u>Napisz do nas</u>, a zamieścimy informacje o twoim wydarzeniu na naszej stronie.</p>
+
+                                        </div>
+                                    </div>
+
+                                </div>
+
+                                <div className="column"></div>
+                            </div>
+                            <div className="separtor asfaltbackground"></div>
+                            <div className="columns">
+                                <div className="column">
+                                    <div className="fun flex">
+                                        <h2>Nasz Email to</h2>
+                                        <a href="mailto:kontakt@nocniepodleglosci.pl">kontakt@nocniepodleglosci.pl</a>
 
                                     </div>
                                 </div>
-                               
-
-                            </div>
-
-                            <div className="column">
-
-                                
-
-                            </div>
-                        </div>
-                        <div className="separtor asfaltbackground"></div>
-                        <div className="columns">
-                            <div className="column">
-                                <div className="fun flex">
-                                <h2>Nasz Email to</h2>
-                                    <a href="mailto:kontakt@nocniepodleglosci.pl">kontakt@nocniepodleglosci.pl</a> 
-
-
-                            </div>
-                            </div>
                             </div>
                             <div className="separtor asfaltbackground"></div>
-                        <div className="columns">
-                            <div className="column is-one-third is-offset-8">
-                            {posts
-                                    .filter(post => post.node.frontmatter.templateKey === 'ofundacji-page')
-                                    .map(({node: post}) => (
-                                        <div className="content mycontent" key={post.id}>
-                                            <p>
-                                                <Link className="has-text-primary" to={post.fields.slug}>
-                                                    {post.frontmatter.title}
-                                                </Link>
+                            <div className="columns">
+                                <div className="column is-one-third is-offset-8">
+                                    {posts
+                                        .filter(post => post.node.frontmatter.templateKey === 'ofundacji-page')
+                                        .map(({node: post}) => (
+                                            <div className="content mycontent" key={post.id}>
+                                                <p>
+                                                    <Link className="has-text-primary" to={post.fields.slug}>
+                                                        {post.frontmatter.title}
+                                                    </Link>
 
-                                            </p>
-                                            <p>
-                                                {post.excerpt}
-                                                <br/>
-                                                <br/>
-                                                <Link className="button" to={post.fields.slug}>
-                                                    Czytaj Więcej 
-                                                </Link>
-                                            </p>
-                                        </div>
-                                    ))}         
+                                                </p>
+                                                <p>
+                                                    {post.excerpt}
+                                                    <br/>
+                                                    <br/>
+                                                    <Link className="button" to={post.fields.slug}>
+                                                        Czytaj Więcej
+                                                    </Link>
+                                                </p>
+                                            </div>
+                                        ))}
+                                </div>
                             </div>
                         </div>
-                    </div>
-                </section>
+                    </section>
                 </Observer>
             </div>
-        )
+        );
     }
 }
 
@@ -261,7 +244,7 @@ IndexPage.propTypes = {
     data: PropTypes.shape({
         allMarkdownRemark: PropTypes.shape({edges: PropTypes.array})
     })
-}
+};
 
 export const pageQuery = graphql `
 query IndexQuery {
