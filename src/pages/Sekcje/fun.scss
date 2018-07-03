@@ -1,51 +1,6 @@
 $black: #000;
 
-.a {
-    background: whitesmoke;
 
-}
-
-.b {
-    background: #ff6f60;
-
-}
-
-.c {
-
-    background: #e53935;
-
-    p,
-    span {
-        color: white !important;
-    }
-
-}
-
-.d {
-    background: #c62828;
-
-    p,
-    span {
-        color: white !important;
-    }
-}
-
-.e {
-
-    background-color: #f51919;
-    p,
-    span {
-        color: white !important;
-    }
-}
-.f {
-
-    background-color: #dc1515;
-    p,
-    span {
-        color: white !important;
-    }
-}
 @media(max-width:986px) {
 
     .fun {
@@ -504,4 +459,103 @@ $black: #000;
 
     }
 
+}
+
+.a {
+    background: whitesmoke;
+
+}
+
+.b {
+    background: #ff6f60;
+
+}
+
+.c {
+
+    background: #e53935;
+
+    p,
+    span {
+        color: white !important;
+    }
+
+}
+
+.d {
+    background: #c62828;
+
+    p,
+    span {
+        color: white !important;
+    }
+}
+
+.e {
+
+    background-color: #f51919;
+    p,
+    span {
+        color: white !important;
+    }
+}
+.f {
+
+    background-color: #dc1515;
+    p,
+    span {
+        color: white !important;
+    }
+}
+
+
+@media screen and (-webkit-min-device-pixel-ratio:0)
+{
+
+.a {
+    background: whitesmoke;
+
+}
+
+.b {
+    background: #ff6f60;
+
+}
+
+.c {
+
+    background: #e53935;
+
+    p,
+    span {
+        color: white !important;
+    }
+
+}
+
+.d {
+    background: #c62828;
+
+    p,
+    span {
+        color: white !important;
+    }
+}
+
+.e {
+
+    background-color: #f51919;
+    p,
+    span {
+        color: white !important;
+    }
+}
+.f {
+
+    background-color: #dc1515;
+    p,
+    span {
+        color: white !important;
+    }
+}
 }
