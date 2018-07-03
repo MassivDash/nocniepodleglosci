@@ -19,7 +19,7 @@ class Navbar extends Component {
 
     render() {
 
-        let css = '';
+        let css = 'is-close';
         let trans = 'is-close';
         if (this.state.active) {
             css = 'is-active';
