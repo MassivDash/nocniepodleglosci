@@ -48,16 +48,6 @@ module.exports = {
             }
         }, {
             resolve: 'gatsby-plugin-sitemap'
-        }, {
-            resolve: 'gatsby-plugin-purify-css',
-            options: {
-                /* Defaults */
-                styleId: 'gatsby-inlined-css',
-                purifyOptions: {
-                    info: true,
-                    minify: true
-                }
-            }
-        }
+        }, 
     ]
 };
