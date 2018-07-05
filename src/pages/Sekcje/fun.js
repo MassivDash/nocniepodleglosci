@@ -131,7 +131,7 @@ const Fun = (props) => {
                     </div>
                 </div>
             </div>
-
+            <div className="clouds2"></div>
         </section>
     );
 };
