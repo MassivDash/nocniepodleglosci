@@ -10,6 +10,7 @@ import config from '../../data/SiteConfig';
 import Start from './Sekcje/start';
 import Fun from './Sekcje/fun';
 import '../layouts/fonts/LOUGRAMM.ttf';
+import BgImage from '../components/BgImage/BgImage';
 
 export default class IndexPage extends PureComponent {
     state = {
@@ -132,6 +133,9 @@ export default class IndexPage extends PureComponent {
                     dot4={this.state.inView4}/>
                 <Observer onChange={this.setStartVisible1}>
                     <div>
+                        <div className="moon-holder">
+                            <BgImage dataSizes={data.imageSharp.sizes} />
+                        </div>
                         <Start isVisible={this.state.inView1}/>
                     </div>
                 </Observer>
@@ -140,6 +144,7 @@ export default class IndexPage extends PureComponent {
 
                 <Observer onChange={this.setStartVisible2}>
                     <div>
+                        
                         <Fun isVisible={this.state.inView2}/>
                     </div>
                 </Observer>
@@ -281,12 +286,12 @@ query IndexQuery {
     }
    
   
-    imageSharp (id: {regex: "/background.jpg/"}) {
+    imageSharp (id: {regex: "/moon.png/"}) {
     id
     children {
       id
     }
-    sizes(maxWidth: 1920, quality: 90, traceSVG: { color: "#3ba3d4" })  {
+    sizes(maxWidth: 1920, quality: 90, traceSVG: { color: "#c93c1f" })  {
     	...GatsbyImageSharpSizes_tracedSVG
     }
     

@@ -15,7 +15,9 @@ const Fun = (props) => {
 
     return (
         <section className={style} id="zacznijzabawe">
+            <div className="clouds"></div>
             <div className="container">
+            
 
                 <div className="columns">
                     <div className="column">
@@ -41,6 +43,7 @@ const Fun = (props) => {
                 <div className="columns">
                     <div className="column">
                         <div className="content fungrid list fun">
+                            
 
                             <div className="a box">
                                 <img className="fun_icon" src={person} alt="noc niepodelgłsci"/>
