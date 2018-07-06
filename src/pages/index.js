@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 import Helmet from 'react-helmet';
 import Observer from '@researchgate/react-intersection-observer';
 import Link from 'gatsby-link';
+import Img from 'gatsby-image';
 import Slider from 'react-slick';
 import Slide from '../components/Slide/Slide';
 import SideDots from '../components/SideDots/SideDots';
@@ -140,7 +141,7 @@ export default class IndexPage extends PureComponent {
                     </div>
                 </Observer>
 
-                <div className="separtor asfaltbackground"></div>
+                <div className="separtor"></div>
 
                 <Observer onChange={this.setStartVisible2}>
                     <div>
@@ -161,7 +162,7 @@ export default class IndexPage extends PureComponent {
                                     </div>
                                 </div>
                             </div>
-                            <div className="separtor asfaltbackground"></div>
+                            <div className="separtor"></div>
                             <div className="columns">
                                 <div className="column">
 
@@ -179,7 +180,7 @@ export default class IndexPage extends PureComponent {
 
                 </Observer>
 
-                <div className="separtor asfaltbackground"></div>
+                <div className="separtor"></div>
 
                 <Observer onChange={this.setStartVisible4}>
                     <section className={style3} id="kontakt">
@@ -202,7 +203,7 @@ export default class IndexPage extends PureComponent {
 
                                 <div className="column"></div>
                             </div>
-                            <div className="separtor asfaltbackground"></div>
+                            <div className="separtor"></div>
                             <div className="columns">
                                 <div className="column">
                                     <div className="fun flex">
@@ -212,7 +213,7 @@ export default class IndexPage extends PureComponent {
                                     </div>
                                 </div>
                             </div>
-                            <div className="separtor asfaltbackground"></div>
+                            <div className="separtor"></div>
                             <div className="columns">
                                 <div className="column is-one-third is-offset-8">
                                     {posts
@@ -240,6 +241,9 @@ export default class IndexPage extends PureComponent {
                         </div>
                     </section>
                 </Observer>
+                <div className="city-wrap">
+                            <Img sizes={data.allImageSharp.edges[0].node.sizes} />
+                        </div>
             </div>
         );
     }
@@ -293,11 +297,21 @@ query IndexQuery {
     }
     sizes(maxWidth: 1920, quality: 90, traceSVG: { color: "#c93c1f" })  {
     	...GatsbyImageSharpSizes_tracedSVG
-    }
-    
-          
-          
-        
+    }      
   }
+
+  allImageSharp(filter: { id: { regex: "/bottom/" } }) {
+  edges {
+    node {
+      id
+      children {
+      id
+    }
+      sizes(maxWidth: 1920, quality: 90, traceSVG: { color: "#c93c1f" })  {
+    	...GatsbyImageSharpSizes_tracedSVG
+    } 
+    }
+  }
+}
 }
 `
