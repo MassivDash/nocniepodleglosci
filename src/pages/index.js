@@ -194,7 +194,7 @@ export default class IndexPage extends PureComponent {
                                                 <span>Impreza</span>
                                             </h2>
                                             <p>
-                                                <u>Napisz do nas</u>, a zamieścimy informacje o twoim wydarzeniu na naszej stronie.</p>
+                                                <u style={{color: 'whitesmoke'}} >Napisz do nas</u>, a zamieścimy informacje o twoim wydarzeniu na naszej stronie.</p>
 
                                         </div>
                                     </div>

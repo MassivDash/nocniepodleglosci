@@ -13,6 +13,7 @@ const Start = (props) => {
     return (
         <section className={style} id="start">
             <div className="hero-body">
+                <div className="cloudsfront"></div>
                 <div className="container has-text-centered intro">
 
                     <div className="fbicon">

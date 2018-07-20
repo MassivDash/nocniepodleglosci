@@ -69,7 +69,7 @@ const Fun = (props) => {
                                 <img className="fun_icon" src={group} alt="noc niepodległości"/>
                                 <ol>
                                     <li>
-                                        
+                                    <span></span>
                                         <p>
                                             Nasza akcja nastawiona jest na wciągnięcie do wspólnej zabawy możliwie
                                                 jak największej liczby Polaków i wszystkich, którzy wspólnie z nami chcieliby
@@ -79,19 +79,19 @@ const Fun = (props) => {
                                 </ol>
                             </div>
                             <div className="c box">
-                                <img className="fun_icon" src={noc} alt="noc ciepodległości"/>
+                                <img className="fun_icon"  src={noc} alt="noc ciepodległości"/>
                                 <ol>
                                     <li>
                                         <span></span>
                                         <p>
-                                            <strong>Noc Niepodległości z 10 na 11 listopada ma być ogólnopolską, powszechną
-                                                imprezą z okazji Święta Niepodległości.</strong>
+                                        Noc Niepodległości z 10 na 11 listopada ma być ogólnopolską, powszechną
+                                                imprezą z okazji Święta Niepodległości.
                                         </p>
                                     </li>
                                 </ol>
                             </div>
                             <div className="d box">
-                                <img className="fun_icon" src={poland} alt="noc niepodelgłsci"/>
+                                <img className="fun_icon"  style={{filter: 'invert(100%)'}} src={poland} alt="noc niepodelgłsci"/>
                                 <ol>
                                     <li>
                                         <span></span>
@@ -105,7 +105,7 @@ const Fun = (props) => {
                                 </ol>
                             </div>
                             <div className="e box">
-                                <img className="fun_icon" src={heart} alt="noc niepodelgłsci"/>
+                                <img className="fun_icon" style={{filter: 'invert(100%)'}} src={heart} alt="noc niepodelgłsci"/>
                                 <ol>
                                     <li>
                                         <span></span>
@@ -116,7 +116,7 @@ const Fun = (props) => {
                                 </ol>
                             </div>
                             <div className="f box">
-                                <img className="fun_icon" src={balloons} alt="noc niepodelgłsci"/>
+                                <img className="fun_icon"  style={{filter: 'invert(100%)'}} src={balloons} alt="noc niepodelgłsci"/>
 
                                 <ol>
                                     <li>
