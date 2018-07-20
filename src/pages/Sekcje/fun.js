@@ -69,11 +69,11 @@ const Fun = (props) => {
                                 <img className="fun_icon" src={group} alt="noc niepodległości"/>
                                 <ol>
                                     <li>
-                                        <span></span>
+                                        
                                         <p>
-                                            <strong>Nasza akcja nastawiona jest na wciągnięcie do wspólnej zabawy możliwie
+                                            Nasza akcja nastawiona jest na wciągnięcie do wspólnej zabawy możliwie
                                                 jak największej liczby Polaków i wszystkich, którzy wspólnie z nami chcieliby
-                                                obchodzić Nasze Święto.</strong>
+                                                obchodzić Nasze Święto.
                                         </p>
                                     </li>
                                 </ol>

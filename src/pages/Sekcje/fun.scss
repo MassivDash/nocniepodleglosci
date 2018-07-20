@@ -155,7 +155,7 @@ $black: #000;
         height: 100%;
         margin-bottom: 0 !important;
         border-radius: 7px;
-        color: #1b1b1b;
+        
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -198,7 +198,7 @@ $black: #000;
     .list {
 
         ol {
-            color: #161517;
+            
             list-style-type: none;
             height: 100%;
             padding: 0;
@@ -220,7 +220,7 @@ $black: #000;
 
         li p {
             font: 22px/1.5 Helvetica, sans-serif;
-            color: #161517;
+            
 
         }
 
@@ -262,6 +262,7 @@ $black: #000;
     }
 
     u {
+        color: black;
         text-underline-position: below;
         text-decoration-color: #ff0000;
     }
@@ -356,7 +357,7 @@ $black: #000;
         height: 100%;
         margin-bottom: 0 !important;
         border-radius: 7px;
-        color: #1b1b1b;
+        
         display: flex;
         align-items: center;
         min-width: 250px;
@@ -400,7 +401,7 @@ $black: #000;
     .list {
 
         ol {
-            color: #161517;
+           
             list-style-type: none;
             height: 100%;
 
@@ -421,7 +422,7 @@ $black: #000;
         li p {
             font: 22px/1.5 Helvetica, sans-serif;
             padding: 70px 2vw;
-            color: #161517;
+            
 
         }
 
@@ -444,7 +445,6 @@ $black: #000;
 
     .fun_icon {
         max-width: 175px;
-        filter: brightness(0%);
         margin-left: 3vw;
     }
 
@@ -464,7 +464,11 @@ $black: #000;
 }
 
 .b {
-    background: #FF6F60;
+    background: #c31201;
+    p,
+    span {
+        color: white !important;
+    }
 
 }
 
@@ -512,8 +516,11 @@ $black: #000;
     }
 
     .b {
-        background: #FF6F60;
-
+        background: #c31201;
+        p,
+        span {
+            color: white !important;
+        }
     }
 
     .c {
