@@ -1,6 +1,6 @@
 import React from 'react';
-import Noc from '../../img/Noc.svg';
-import Numbers from '../../img/numbers.svg';
+import Noc from '../../img/Noc.png';
+import Numbers from '../../img/numbers.png';
 import facebook from '../../img/fb.svg';
 import './start.sass';
 
