@@ -295,7 +295,7 @@ query IndexQuery {
     children {
       id
     }
-    sizes(maxWidth: 1920, quality: 90, traceSVG: { color: "#c93c1f" })  {
+    sizes(maxWidth: 1920, quality: 90, traceSVG: { color: "#ce1010" })  {
     	...GatsbyImageSharpSizes_tracedSVG
     }      
   }
@@ -307,7 +307,7 @@ query IndexQuery {
       children {
       id
     }
-      sizes(maxWidth: 1920, quality: 90, traceSVG: { color: "#c93c1f" })  {
+      sizes(maxWidth: 1920, quality: 90, traceSVG: { color: "#ce1010" })  {
     	...GatsbyImageSharpSizes_tracedSVG
     } 
     }
