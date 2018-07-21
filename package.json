@@ -1,8 +1,8 @@
 {
-  "name": "gatsby-starter-netlify-cms",
-  "description": "Example Gatsby, and Netlify CMS project",
-  "version": "1.1.1",
-  "author": "Austin Green",
+  "name": "Noc-niepodleglosci",
+  "description": "Noc Niepodleglosci website",
+  "version": "1.0.0",
+  "author": "Lukasz Celitan",
   "dependencies": {
     "@researchgate/react-intersection-observer": "^0.7.3",
     "bulma": "^0.6.2",
