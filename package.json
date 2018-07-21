@@ -6,7 +6,6 @@
   "dependencies": {
     "@researchgate/react-intersection-observer": "^0.7.3",
     "bulma": "^0.6.2",
-    "eslint-config-airbnb": "^16.1.0",
     "gatsby": "^1.9.277",
     "gatsby-image": "^1.0.55",
     "gatsby-link": "^1.6.46",
@@ -49,6 +48,7 @@
   },
   "devDependencies": {
     "babel-eslint": "^8.2.6",
+    "eslint-config-airbnb": "^16.1.0",
     "eslint": "^5.1.0",
     "eslint-plugin-react": "^7.10.0",
     "prettier": "^1.13.7"

@@ -101,6 +101,7 @@ $black: #000;
         .fungrid {
             display: flex;
             flex-direction: column;
+            -webkit-box-orient: vertical; 
             flex-grow: 1;
             justify-content: center;
             align-items: center;
