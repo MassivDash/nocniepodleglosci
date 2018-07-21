@@ -18,12 +18,15 @@ class Navbar extends Component {
     }
 
     render() {
-
+        let menu = 'is-close';
         let css = 'is-close';
         let trans = 'is-close';
-        if (this.state.active) {
+        if (this.state.active) 
+        {
+            menu= 'is-open';
             css = 'is-active';
             trans = 'is-active';
+            
         }
 
         return (
@@ -41,7 +44,7 @@ class Navbar extends Component {
                         </button>
 
                     </div>
-                    <div className={['navbar-menu', css].join(' ')} id='navMenu'>
+                    <div className={['navbar-menu', menu].join(' ')} id='navMenu'>
                         <div className={['navbar-start', trans].join(' ')}>
 
                             <Link
