@@ -135,7 +135,7 @@ export default class IndexPage extends PureComponent {
                 <Observer onChange={this.setStartVisible1}>
                     <div>
                         <div className="moon-holder">
-                            <BgImage dataSizes={data.imageSharp.sizes} />
+                            <BgImage dataSizes={data.imageSharp.sizes}/>
                         </div>
                         <Start isVisible={this.state.inView1}/>
                     </div>
@@ -145,7 +145,7 @@ export default class IndexPage extends PureComponent {
 
                 <Observer onChange={this.setStartVisible2}>
                     <div>
-                        
+
                         <Fun isVisible={this.state.inView2}/>
                     </div>
                 </Observer>
@@ -194,7 +194,10 @@ export default class IndexPage extends PureComponent {
                                                 <span>Impreza</span>
                                             </h2>
                                             <p>
-                                                <u style={{color: 'whitesmoke'}} >Napisz do nas</u>, a zamieścimy informacje o twoim wydarzeniu na naszej stronie.</p>
+                                                <u
+                                                    style={{
+                                                    color: 'whitesmoke'
+                                                }}>Napisz do nas</u>, a zamieścimy informacje o twoim wydarzeniu na naszej stronie.</p>
 
                                         </div>
                                     </div>
@@ -242,8 +245,8 @@ export default class IndexPage extends PureComponent {
                     </section>
                 </Observer>
                 <div className="city-wrap">
-                            <Img sizes={data.allImageSharp.edges[0].node.sizes} />
-                        </div>
+                    <Img sizes={data.allImageSharp.edges[0].node.sizes}/>
+                </div>
             </div>
         );
     }
