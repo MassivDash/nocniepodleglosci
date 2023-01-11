@@ -19,7 +19,7 @@
     "gatsby-remark-images": "^1.5.67",
     "gatsby-remark-responsive-image": "^1.0.0-alpha13-alpha.435e0178",
     "gatsby-source-filesystem": "^1.5.39",
-    "gatsby-transformer-remark": "^1.7.44",
+    "gatsby-transformer-remark": "^5.25.1",
     "gatsby-transformer-sharp": "^1.6.27",
     "intersection-observer": "^0.5.0",
     "lodash": "^4.17.10",
